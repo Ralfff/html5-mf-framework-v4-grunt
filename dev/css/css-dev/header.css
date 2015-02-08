@@ -1,0 +1,59 @@
+
+.logo {
+  text-decoration: none;
+} 
+
+.js .main-nav { 
+  height: auto; 
+  max-height: 1px; 
+  overflow: hidden; 
+  -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+      -ms-transition: all .25s ease-in-out;
+       -o-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+} 
+
+.js .nav-open .main-nav { 
+  max-height: 400px; 
+  -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+      -ms-transition: all .25s ease-in-out;
+       -o-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+}
+
+.main-nav ul {
+  padding: 0;
+}
+
+  .main-nav li {
+    list-style: none;
+  }
+
+    .main-nav a {
+      display: block;
+      padding: 10px;
+      color: #000;
+      text-decoration: none;
+    }
+
+.menu-button {
+  display: none;
+}
+
+.js .menu-button { /*Button to toggle mobile-nav*/
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px; 
+  background: url('images/supplies/open-menu-bg.png') center center no-repeat; 
+  background-size: 20px;
+} 
+
+.nav-open .menu-button {
+  background: url('images/supplies/close-menu-bg.png') center center no-repeat; 
+  background-size: 20px;
+}

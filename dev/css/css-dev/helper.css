@@ -1,0 +1,70 @@
+/*TYPOGRAPHY & LAYOUT
+**************************************************************/
+
+/*size*/
+.small { font-size: .75em; }
+.medium { font-size: 1.5em; }
+.large { font-size: 2em; }
+.x-large { font-size: 2.5em; }
+
+/*alignment*/
+.align-center { text-align: center; }
+.align-justify { text-align: justify; }
+.align-right { text-align: right; }
+.align-left {text-align: left; }
+
+/*styling*/
+.drop-cap {
+  font-size: 3em;
+  line-height: 1;
+  font-weight: 600;
+  padding: 2px 8px 0 0;
+  float: left; }
+.run-in { font-weight: bold;}
+.italic {font-style: italic;}
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+
+/*other*/
+.hide-text {border: 0;font: 0/0 a;text-shadow: none;color: transparent;}
+
+.r-br {display: none;}/*responsive line break - no break on mobile*/
+
+.smooth {-webkit-font-smoothing: antialiased;}
+.sub-smooth{-webkit-font-smoothing: subpixel-antialiased;} 
+
+.cols2, 
+.cols3, 
+.cols4 {max-width: 780px;-webkit-column-count: 1;-moz-column-count: 1;-ms-column-count: 1;column-count: 1;}
+
+/*DISPLAY OPTIONS
+**************************************************************/
+
+/*floats*/
+.left {float: left;}
+.right {float: right;}
+
+/*display*/
+.block {display: block;}
+.inline {display: inline;}
+
+/*position*/
+.fixed {position: fixed;}
+.absolute {position: absolute;}
+.relative {position: relative;}
+.static {position: static;} 
+
+/*FONT AND COLOR CLASSES
+**************************************************************/
+
+.sans { font-family: Verdana, sans-serif; }
+.serif { font-family: Georgia, Times, serif; }
+.mono { font-family: courier, monospace; }
+.fancy {
+  font-family: "Didot", "Times New Roman", Georgia, Times, serif;
+  -moz-font-feature-settings: "liga=1";
+   -ms-font-feature-settings: "liga" 1;
+  -moz-font-feature-settings: "frac=1";
+   -ms-font-feature-settings: "frac" 1;
+}
+

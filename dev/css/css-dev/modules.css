@@ -1,0 +1,43 @@
+/*MISC
+**************************************************************/
+
+.circle { 
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%; 
+}
+
+/*Call to Action Button*/
+.cta,
+input[type="submit"],
+button { 
+  outline: none;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: .25em .5em .35em;
+  line-height: 1em;
+  -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+      -ms-transition: all .25s ease-in-out;
+       -o-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+}
+
+  .no-touch .cta:hover,
+  .no-touch input[type="submit"]:hover,
+  .no-touch button:hover  { 
+    
+  }
+
+  .cta:active, 
+  .cta.active,
+  input[type="submit"]:active,
+  button:active {
+    -webkit-transition: none;
+       -moz-transition: none;
+        -ms-transition: none;
+         -o-transition: none;
+            transition: none;
+  }

@@ -1,0 +1,41 @@
+/*PAGE-SEGMENTS
+**************************************************************/
+
+.container { /*contains the whole Page */
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+      
+  header {
+    position: relative;
+    z-index: 1100;
+  } 
+  
+  .content {
+    position: relative;
+  } 
+  
+  footer {
+    position: relative;
+  }
+  
+    .frame, 
+    [class*=frame-] { /*frame, contains Content-Modules, no padding!*/
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    } 
+  
+/*CONTENT-MODULES 
+**************************************************************/
+
+.half, 
+.third, .third.double, 
+.quarter, .quarter.triple  { 
+  width: 100%;
+  position: relative;
+  padding: 25px;
+  float: none;
+}

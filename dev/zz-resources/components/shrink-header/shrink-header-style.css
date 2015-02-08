@@ -1,0 +1,29 @@
+header { 
+  width: 100%;
+  padding-bottom: 10px; 
+  position: fixed; 
+  margin: 0 auto; 
+  left: 0; 
+  right: 0; 
+} 
+
+	.logo-container {
+	  height: 80px; 
+	  padding-top: 20px; 
+	  overflow: hidden;
+	  background: #fff;
+	  -webkit-transition: all .25s ease-in-out;
+	     -moz-transition: all .25s ease-in-out;
+	      -ms-transition: all .25s ease-in-out;
+	       -o-transition: all .25s ease-in-out;
+	          transition: all .25s ease-in-out;
+	} 
+	
+		.slide-up {
+		  height: 0 !important; 
+		  padding-top: 0 !important;  
+		} 
+
+.content {
+	padding-top: 150px; /*Header + Nav height*/
+}

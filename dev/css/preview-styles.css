@@ -1,0 +1,103 @@
+header { 
+	position: fixed; 
+	width: 100%; 
+	background: #fff; 
+	border-bottom: 1px solid; 
+	opacity: .95;
+} 
+
+.frame {
+	padding: 25px;
+}
+
+	header .preview-h {
+		font-size: 24px; 
+	} 
+
+	.content{
+		margin: 25px auto;
+	} 
+
+	.anchor {
+		position: relative; 
+		top: -150px; 
+		visibility: hidden;
+	}
+
+.preview-h { 
+  color: #fff; 
+  background: #aaa; 
+  font-weight: 700;
+  padding: 10px 25px .2em; 
+  line-height: 1.4; 
+  margin-top: 100px;
+} 
+  
+  .preview-sub-h {
+    color: #aaa; 
+    font-size: 30px;
+    border-bottom: 1px solid; 
+    padding: 25px 25px 15px; 
+  } 
+
+ .color-area  {
+	height: 150px; 
+	-webkit-border-radius: 15px 15px 0 0;
+	-moz-border-radius: 15px 15px 0 0;
+	border-radius: 15px 15px 0 0;
+ } 
+
+ .color-title { 
+ 	text-align: center; 
+ 	border-bottom: 1px solid;
+ 	border-top: 1px solid;
+ } 
+
+ .tints .quarter {
+	height: 50px; 
+	padding: 0;
+ }
+
+ @media screen and (max-width: 700px) {
+	
+	.preview-h { 
+	  font-size: 30px; 
+	  margin-top: 25px;
+	}
+	
+	.preview-sub-h { 
+	  font-size: 20px;
+	}
+	
+	.preview-h {
+	  text-align: center;
+	} 
+
+	.color-area  {
+		height: 60px; 
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+ 	} 
+
+		.color-tile.quarter {
+			width: 50%;
+		} 
+
+			.color-tile.quarter .quarter {
+			width: 25%;
+			}
+
+ }
+
+ @media screen and (max-width: 400px) { 
+
+	.color-tile.quarter {
+		width: 100%;
+	} 
+
+		.color-tile.quarter .quarter {
+		width: 25%;
+		}
+
+} 
