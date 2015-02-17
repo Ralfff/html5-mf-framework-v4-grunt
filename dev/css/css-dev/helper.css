@@ -28,14 +28,38 @@
 /*other*/
 .hide-text {border: 0;font: 0/0 a;text-shadow: none;color: transparent;}
 
-.r-br {display: none;}/*responsive line break - no break on mobile*/
-
 .smooth {-webkit-font-smoothing: antialiased;}
 .sub-smooth{-webkit-font-smoothing: subpixel-antialiased;} 
 
+.r-br {display: none;}/*responsive line break - no break on mobile*/
+
 .cols2, 
 .cols3, 
-.cols4 {max-width: 780px;-webkit-column-count: 1;-moz-column-count: 1;-ms-column-count: 1;column-count: 1;}
+.cols4 {max-width: 780px;-webkit-column-count: 1;-moz-column-count: 1;-ms-column-count: 1;column-count: 1;} 
+
+@media screen and (min-width: 600px) {
+
+  .r-br {display: block;} /*responsive line break*/
+
+  .cols2 {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+        -ms-column-count: 2;
+            column-count: 2;}
+  
+  .cols3 {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+        -ms-column-count: 3;
+            column-count: 3;}
+  
+  .cols4 {
+    -webkit-column-count: 4;
+       -moz-column-count: 4;
+        -ms-column-count: 4;
+            column-count: 4;} 
+
+} 
 
 /*DISPLAY OPTIONS
 **************************************************************/

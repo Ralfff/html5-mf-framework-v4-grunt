@@ -59,20 +59,14 @@ Copyright 2012—2014 __Ralf Hoffmeister__ All rights reserved.
 
 @import "css/css-dev/helper.css"; 
 
-/* ========== */
-/* = BREAKS = */
-/* ========== */ 
+/* ================== */
+/* = RETINA & PRINT = */
+/* ================== */
 
-@import "css/css-dev/breaks.css";
-
-/* ========== */
-/* = RETINA = */
-/* ========== */
-
-@import "css/css-dev/retina.css"; 
+@import "css/css-dev/media.css"; 
 
 /* ========= */
-/* = PRINT = */
+/* =  = */
 /* ========= */
 
 @import "css/css-dev/print.css"; 

@@ -28,7 +28,7 @@
       margin: 0 auto;
     } 
   
-/*CONTENT-MODULES 
+/*GRID 
 **************************************************************/
 
 .half, 
@@ -38,4 +38,28 @@
   position: relative;
   padding: 25px;
   float: none;
+} 
+
+@media screen and (min-width: 600px) { 
+
+  .half {
+    width: 50.000000%;
+    float: left;}
+  
+  .third {
+    width: 33.333333%;
+    float: left;}
+
+  .third.double {
+    width: 66.666666%;
+    float: left;}
+  
+  .quarter {
+    width: 25.000000%;
+    float: left;}
+
+  .quarter.triple {
+    width: 75.000000%;
+    float: left;} 
+
 }
