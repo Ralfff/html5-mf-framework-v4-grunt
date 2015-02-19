@@ -51,7 +51,7 @@ module.exports = function(grunt) {
       
       css: {
         files: ['dev/style.css','dev/css/css-dev/*'],
-        tasks: ['cssmin','cssjoin'],
+        tasks: ['cssmin'],
         options: {
           livereload: true,
         },
