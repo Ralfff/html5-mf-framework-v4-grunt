@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         dest: 'dev/js/scripts.min.js' // output
       },
       wp: {
-        src: ['dev/js/plugins/*.js','dev/js/custom.js'], // input
+        src: ['dev/js/plugins/*.js'], // input
         dest: 'wp/js/scripts.min.js' // output
       }
     },//END OF UGLIFY
@@ -84,7 +84,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'dev/',
-            src: ['style.css','js/modernizr.custom.js','js/jquery.js','js/scripts.min.js','images/**','fonts/**'],
+            src: ['style.css','js/modernizr.custom.js','js/jquery.js','js/custom.js','js/scripts.min.js','images/**','fonts/**'],
             dest: 'wp/',
           },
         ],

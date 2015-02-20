@@ -48,12 +48,12 @@
   right: 0;
   width: 50px;
   height: 50px; 
-  background: url('images/supplies/open-menu-bg.png') center center no-repeat; 
+  background: url('images/interface/open-menu-bg.png') center center no-repeat; 
   background-size: 20px;
 } 
 
 .nav-open .menu-button {
-  background: url('images/supplies/close-menu-bg.png') center center no-repeat; 
+  background: url('images/interface/close-menu-bg.png') center center no-repeat; 
   background-size: 20px;
 } 
 
