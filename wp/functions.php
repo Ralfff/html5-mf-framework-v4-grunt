@@ -23,10 +23,11 @@
       wp_deregister_script('jquery');//jQuery aus der WP Library abmelden...
       wp_register_script('jquery', get_bloginfo('template_directory') . "/js/jquery.js" , false); //...neue Quelle für jQuery angeben 
       wp_enqueue_script('jquery'); //jquery anmelden 
-	
-		  wp_register_script('min-js', get_bloginfo('template_directory') . "/js/scripts.min.js"); // plugins, custom.js minified 
-		  wp_enqueue_script('min-js'); //custom anmelden 
-	}
+		  wp_register_script('plugins-js', get_bloginfo('template_directory') . "/js/plugins.min.js"); // plugins, minified 
+		  wp_enqueue_script('plugins-js'); //custom anmelden 
+      wp_register_script('custom', get_bloginfo('template_directory') . "/js/custom.js"); // custom.js minified 
+      wp_enqueue_script('custom'); //custom anmelden 	
+    }
 	
 	// Clean up the <head>
 	function removeHeadLinks() {

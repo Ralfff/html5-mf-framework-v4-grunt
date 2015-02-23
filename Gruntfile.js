@@ -2,9 +2,8 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-
-
     pkg: grunt.file.readJSON('package.json'),
+
 
     uglify: {
       options: {
@@ -18,11 +17,16 @@ module.exports = function(grunt) {
         src: ['dev/js/modernizr.custom.js','dev/js/jquery.js','dev/js/plugins/*.js','dev/js/custom.js'], // input
         dest: 'dev/js/scripts.min.js' // output
       },
+      deploy: {
+        src: ['dev/js/modernizr.custom.js','dev/js/jquery.js','dev/js/plugins/*.js'], // input
+        dest: 'dev/js/scripts.min.js' // output
+      },
       wp: {
         src: ['dev/js/plugins/*.js'], // input
-        dest: 'wp/js/scripts.min.js' // output
+        dest: 'wp/js/plugins.min.js' // output
       }
     },//END OF UGLIFY
+
 
     cssmin: {
       target: {
@@ -32,18 +36,20 @@ module.exports = function(grunt) {
       }
     },//END OF CSSMIN
 
-      cssjoin: {
-        join :{
-          files: {
-            'dev/style.css': ['dev/style-imports.css'],
-          },
-        }
-      }, //END OF CSSJOIN
+
+    cssjoin: {
+      join :{
+        files: {
+          'dev/style.css': ['dev/style-imports.css'],
+        },
+      }
+    }, //END OF CSSJOIN
+
 
     watch: {
       scripts: {
         files: ['dev/js/*.js'],
-        tasks: ['uglify'],
+        tasks: ['uglify:deploy'],
         options: {
           spawn: false,
         }
@@ -65,8 +71,8 @@ module.exports = function(grunt) {
         },
       },
 
-
     }, //END OF WATCH
+
 
     copy: {
       deploy: {
@@ -74,7 +80,15 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'dev/',
-            src: ['*.html', 'style.css', 'style.min.css','js/scripts.min.js','images/**','fonts/**'],
+            src: [
+              '*.html', 
+              'style.css', 
+              'style.min.css',
+              'js/scripts.min.js',
+              'js/custom.js',
+              'images/**',
+              'fonts/**'
+            ],
             dest: 'live/',
           },
         ],
@@ -84,12 +98,21 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'dev/',
-            src: ['style.css','js/modernizr.custom.js','js/jquery.js','js/custom.js','js/scripts.min.js','images/**','fonts/**'],
+            src: [
+              'style.css',
+              'js/modernizr.custom.js',
+              'js/jquery.js',
+              'js/scripts.min.js',
+              'js/custom.js',
+              'images/**',
+              'fonts/**'
+            ],
             dest: 'wp/',
           },
         ],
       },
     },//END OF COPY
+
 
   });
 
@@ -102,6 +125,6 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['uglify:all', 'cssjoin', 'cssmin','watch']);
   grunt.registerTask('join', ['watch:join']);
-  grunt.registerTask('deploy', ['uglify:all', 'cssjoin', 'cssmin', 'copy:deploy']);
+  grunt.registerTask('deploy', ['uglify:deploy', 'cssjoin', 'cssmin', 'copy:deploy']);
   grunt.registerTask('wp', ['uglify:wp', 'cssjoin', 'copy:wp']);
 };
