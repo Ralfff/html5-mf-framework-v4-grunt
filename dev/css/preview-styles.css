@@ -6,6 +6,10 @@ header {
 	opacity: .95;
 } 
 
+.main-nav li {
+	float: left;
+}
+
 .frame {
 	padding: 25px;
 }

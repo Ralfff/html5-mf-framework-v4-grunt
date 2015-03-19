@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         preserveComments: 'some',
       },
       build: {
-        src: 'dev/js/custom.js', // input
+        src: 'dev/js/custom.js', // input 
         dest: 'dev/js/custom.min.js' // output
       },
       all: {
@@ -81,8 +81,8 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'dev/',
             src: [
-              '*.html', 
-              'style.css', 
+              '*.html',
+              'style.css',
               'style.min.css',
               'js/scripts.min.js',
               'js/custom.js',

@@ -3,6 +3,14 @@
  *  v1.3.3
  */
 
+.owl-wrapper-outer {
+  overflow: hidden;
+}
+
+.owl-carousel img {
+  display: block;
+} 
+
 /* clearfix */
 .owl-carousel .owl-wrapper:after {
   content: ".";

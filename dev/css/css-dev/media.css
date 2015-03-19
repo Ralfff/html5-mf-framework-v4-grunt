@@ -1,9 +1,13 @@
+/* ================== */
+/* = RETINA & PRINT = */
+/* ================== */
+
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
     
   
 
-} /*END MEDIA-QUERY RETINA*/
+} /*END MEDIA RETINA*/
 
 @media print {
 
@@ -21,4 +25,4 @@
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 
-} /*END MEDIA-QUERY PRINT*/
+} /*END MEDIA PRINT*/

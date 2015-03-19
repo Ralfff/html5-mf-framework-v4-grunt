@@ -1,3 +1,7 @@
+/* ========================================================= */
+/* = ===================== BASE STYLES =================== = */
+/* ========================================================= */
+
  html {
   min-height: 100%;
   font-size: 100%;
@@ -229,4 +233,32 @@ textarea {
 
  blockquote::-webkit-selection { color: #222222; }
     blockquote::-moz-selection { color: #222222; }
-         blockquote::selection { color: #222222; }
+         blockquote::selection { color: #222222; } 
+
+/*FONT AND COLOR CLASSES
+**************************************************************/
+
+.sans { font-family: Verdana, sans-serif; }
+.serif { font-family: Georgia, Times, serif; }
+.mono { font-family: courier, monospace; }
+.fancy {
+  font-family: "Didot", "Times New Roman", Georgia, Times, serif;
+  -moz-font-feature-settings: "liga=1";
+   -ms-font-feature-settings: "liga" 1;
+  -moz-font-feature-settings: "frac=1";
+   -ms-font-feature-settings: "frac" 1;
+} 
+
+.base-color {        color: #ccc;} 
+.base-bg {background-color: #ccc;} 
+
+.body-color {        color: #888;}
+.body-bg {background-color: #888;} 
+
+.accent-color {        color: #f00;} 
+.accent-bg {background-color: #f00;} 
+
+.soft-color {        color: #faa;} 
+.soft-bg {background-color: #faa;} 
+
+

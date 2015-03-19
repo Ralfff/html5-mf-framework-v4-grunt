@@ -11,6 +11,8 @@ Copyright 2012—2014 __Ralf Hoffmeister__ All rights reserved.
 */
 
 /* CSS Document */
+
+
 /* ========================================================= */
 /* = ================= ADJUSTMENTS ======================= = */
 /* ========================================================= */
@@ -33,8 +35,9 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}tabl
 .alignnone{margin:5px 20px 20px 0}.aligncenter,div.aligncenter{display:block;margin:5px auto}.alignright{float:right;margin:5px 0 20px 20px}.alignleft{float:left;margin:5px 20px 20px 0}.aligncenter{display:block;margin:5px auto}a img.alignright{float:right;margin:5px 0 20px 20px}a img.alignnone{margin:5px 20px 20px 0}a img.alignleft{float:left;margin:5px 20px 20px 0}a img.aligncenter{display:block;margin-left:auto;margin-right:auto}.wp-caption{background:#fff;border:1px solid #f0f0f0;max-width:96%;padding:5px 3px 10px;text-align:center}.wp-caption.alignnone{margin:5px 20px 20px 0}.wp-caption.alignleft{margin:5px 20px 20px 0}.wp-caption.alignright{margin:5px 0 20px 20px}.wp-caption img{border:0 none;height:auto;margin:0;max-width:98.5%;padding:0;width:auto}.wp-caption p.wp-caption-text{font-size:11px;line-height:17px;margin:0;padding:0 4px 5px}
  
 
+
 /* ========================================================= */
-/* = ==================== HELPERS ======================== = */
+/* = ==================== MODULES ======================== = */
 /* ========================================================= */
 
 /*MISC
@@ -82,11 +85,12 @@ button {
   }
  
 
+
 /* ========================================================= */
 /* = ===================== BASE STYLES =================== = */
 /* ========================================================= */
 
-html {
+ html {
   min-height: 100%;
   font-size: 100%;
   text-rendering: optimizeLegibility;
@@ -251,7 +255,17 @@ textarea,
 button{
   font-family:inherit;
   font-size: inherit;
-}
+} 
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+textarea:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 input[type="text"],
 input[type="email"],
@@ -309,6 +323,36 @@ textarea {
     blockquote::-moz-selection { color: #222222; }
          blockquote::selection { color: #222222; } 
 
+/*FONT AND COLOR CLASSES
+**************************************************************/
+
+.sans { font-family: Verdana, sans-serif; }
+.serif { font-family: Georgia, Times, serif; }
+.mono { font-family: courier, monospace; }
+.fancy {
+  font-family: "Didot", "Times New Roman", Georgia, Times, serif;
+  -moz-font-feature-settings: "liga=1";
+   -ms-font-feature-settings: "liga" 1;
+  -moz-font-feature-settings: "frac=1";
+   -ms-font-feature-settings: "frac" 1;
+} 
+
+.base-color {        color: #ccc;} 
+.base-bg {background-color: #ccc;} 
+
+.body-color {        color: #888;}
+.body-bg {background-color: #888;} 
+
+.accent-color {        color: #f00;} 
+.accent-bg {background-color: #f00;} 
+
+.soft-color {        color: #faa;} 
+.soft-bg {background-color: #faa;} 
+
+
+ 
+
+
 /* ========================================================= */
 /* = =================PAGE STRUCTURE====================== = */
 /* ========================================================= */
@@ -343,7 +387,7 @@ textarea {
       margin: 0 auto;
     } 
   
-/*CONTENT-MODULES 
+/*GRID 
 **************************************************************/
 
 .half, 
@@ -355,10 +399,34 @@ textarea {
   float: none;
 } 
 
+@media screen and (min-width: 600px) { 
+
+  .half {
+    width: 50.000000%;
+    float: left;}
+  
+  .third {
+    width: 33.333333%;
+    float: left;}
+
+  .third.double {
+    width: 66.666666%;
+    float: left;}
+  
+  .quarter {
+    width: 25.000000%;
+    float: left;}
+
+  .quarter.triple {
+    width: 75.000000%;
+    float: left;} 
+
+} 
+
+
 /* ========== */
 /* = HEADER = */
 /* ========== */
-
 
 .logo {
   text-decoration: none;
@@ -417,20 +485,34 @@ textarea {
 .nav-open .menu-button {
   background: url('images/interface/close-menu-bg.png') center center no-repeat; 
   background-size: 20px;
+} 
+
+@media screen and (min-width: 600px) {
+
+  .js .menu-button {
+    display: none;
+  } 
+
+  .js .main-nav { 
+    height: auto; 
+    max-height: none; 
+  }
+
+
 }
+
  
+
 
 /* =========== */
 /* = CONTENT = */
-/* =========== */
+/* =========== */ 
 
-@import "css/css-dev/content.css"; 
 
 /* ========== */
 /* = FOOTER = */
-/* ========== */
+/* ========== */ 
 
-@import "css/css-dev/footer.css"; 
 
 /* =========== */
 /* = HELPERS = */
@@ -466,51 +548,14 @@ textarea {
 /*other*/
 .hide-text {border: 0;font: 0/0 a;text-shadow: none;color: transparent;}
 
-.r-br {display: none;}/*responsive line break - no break on mobile*/
-
 .smooth {-webkit-font-smoothing: antialiased;}
 .sub-smooth{-webkit-font-smoothing: subpixel-antialiased;} 
 
+.r-br {display: none;}/*responsive line break - no break on mobile*/
+
 .cols2, 
 .cols3, 
-.cols4 {max-width: 780px;-webkit-column-count: 1;-moz-column-count: 1;-ms-column-count: 1;column-count: 1;}
-
-/*DISPLAY OPTIONS
-**************************************************************/
-
-/*floats*/
-.left {float: left;}
-.right {float: right;}
-
-/*display*/
-.block {display: block;}
-.inline {display: inline;}
-
-/*position*/
-.fixed {position: fixed;}
-.absolute {position: absolute;}
-.relative {position: relative;}
-.static {position: static;} 
-
-/*FONT AND COLOR CLASSES
-**************************************************************/
-
-.sans { font-family: Verdana, sans-serif; }
-.serif { font-family: Georgia, Times, serif; }
-.mono { font-family: courier, monospace; }
-.fancy {
-  font-family: "Didot", "Times New Roman", Georgia, Times, serif;
-  -moz-font-feature-settings: "liga=1";
-   -ms-font-feature-settings: "liga" 1;
-  -moz-font-feature-settings: "frac=1";
-   -ms-font-feature-settings: "frac" 1;
-}
-
- 
-
-/* ========== */
-/* = BREAKS = */
-/* ========== */ 
+.cols4 {max-width: 780px;-webkit-column-count: 1;-moz-column-count: 1;-ms-column-count: 1;column-count: 1;} 
 
 @media screen and (min-width: 600px) {
 
@@ -533,52 +578,39 @@ textarea {
        -moz-column-count: 4;
         -ms-column-count: 4;
             column-count: 4;} 
-  
-  .half {
-    width: 50.000000%;
-    float: left;}
-  
-  .third {
-    width: 33.333333%;
-    float: left;}
 
-  .third.double {
-    width: 66.666666%;
-    float: left;}
-  
-  .quarter {
-    width: 25.000000%;
-    float: left;}
+} 
 
-  .quarter.triple {
-    width: 75.000000%;
-    float: left;} 
+/*DISPLAY OPTIONS
+**************************************************************/
 
-  .js .menu-button {
-    display: none;
-  } 
+/*floats*/
+.left {float: left;}
+.right {float: right;}
 
-  .js .main-nav { 
-    height: auto; 
-    max-height: none; 
-  }
+/*display*/
+.block {display: block;}
+.inline {display: inline;}
 
-} /*END MEDIA-QUERY MIN-600*/
+/*position*/
+.fixed {position: fixed;}
+.absolute {position: absolute;}
+.relative {position: relative;}
+.static {position: static;} 
+
+ 
 
 
-/* ========== */
-/* = RETINA = */
-/* ========== */
+/* ================== */
+/* = RETINA & PRINT = */
+/* ================== */
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-    /* High-Res stuff here */
-}
- 
+    
+  
 
-/* ========= */
-/* = PRINT = */
-/* ========= */
+} /*END MEDIA RETINA*/
 
 @media print {
 
@@ -596,5 +628,7 @@ textarea {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 
-} /*END MEDIA-QUERY PRINT*/ 
+} /*END MEDIA PRINT*/ 
+
+
 

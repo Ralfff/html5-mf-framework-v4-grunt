@@ -1,3 +1,7 @@
+/* =========== */
+/* = HELPERS = */
+/* =========== */
+
 /*TYPOGRAPHY & LAYOUT
 **************************************************************/
 
@@ -77,18 +81,4 @@
 .absolute {position: absolute;}
 .relative {position: relative;}
 .static {position: static;} 
-
-/*FONT AND COLOR CLASSES
-**************************************************************/
-
-.sans { font-family: Verdana, sans-serif; }
-.serif { font-family: Georgia, Times, serif; }
-.mono { font-family: courier, monospace; }
-.fancy {
-  font-family: "Didot", "Times New Roman", Georgia, Times, serif;
-  -moz-font-feature-settings: "liga=1";
-   -ms-font-feature-settings: "liga" 1;
-  -moz-font-feature-settings: "frac=1";
-   -ms-font-feature-settings: "frac" 1;
-}
 
