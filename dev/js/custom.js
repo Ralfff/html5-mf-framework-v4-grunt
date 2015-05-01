@@ -22,12 +22,7 @@ Custom Script
 				e.preventDefault();
 			});
 			}
-			//Window resize
-			$(window).resize(function(){
-				if($(this).innerWidth()  >= $screenSize) {
-					$body.removeClass('nav-open');
-				}
-			});
+
 		
 		function easeScroll() {
 			//Animate Scroll
@@ -56,6 +51,26 @@ Custom Script
 			});
 	
 		}
+
+		//Function Trigger Interval 
+		function debouncer( func , timeout ) {
+			var timeoutID , timeout = timeout || 200;
+			return function () {
+				var scope = this , args = arguments;
+				clearTimeout( timeoutID );
+				timeoutID = setTimeout( function () {
+					func.apply( scope , Array.prototype.slice.call( args ) );
+				} , timeout );
+			};
+		}
+
+		//Debounce resizing Interval 
+		$( window ).resize( debouncer( function ( e ) {
+			if($(this).innerWidth()  >= $screenSize) {
+				$body.removeClass('nav-open');
+			}
+		}, 200)
+		);
 
 
     });

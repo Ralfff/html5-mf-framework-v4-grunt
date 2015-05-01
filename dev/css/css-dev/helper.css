@@ -26,6 +26,7 @@
   float: left; }
 .run-in { font-weight: bold;}
 .italic {font-style: italic;}
+.bold {font-weight: 700;}
 .uppercase { text-transform: uppercase; }
 .lowercase { text-transform: lowercase; }
 
@@ -33,13 +34,20 @@
 .hide-text {border: 0;font: 0/0 a;text-shadow: none;color: transparent;}
 
 .smooth {-webkit-font-smoothing: antialiased;}
-.sub-smooth{-webkit-font-smoothing: subpixel-antialiased;} 
+.sub-smooth {-webkit-font-smoothing: subpixel-antialiased;} 
 
-.r-br {display: none;}/*responsive line break - no break on mobile*/
+.r-br {display: none;} /*responsive line break - no break on mobile*/
 
 .cols2, 
 .cols3, 
-.cols4 {max-width: 780px;-webkit-column-count: 1;-moz-column-count: 1;-ms-column-count: 1;column-count: 1;} 
+.cols4 {
+  max-width: 780px;
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  -ms-column-count: 1;
+  column-count: 1;} 
+
+
 
 @media screen and (min-width: 600px) {
 
@@ -62,6 +70,39 @@
        -moz-column-count: 4;
         -ms-column-count: 4;
             column-count: 4;} 
+
+      .cols2 p, 
+      .cols3 p, 
+      .cols4 p {
+          padding-top: 0; 
+          padding-bottom: 1em;
+          display: inline-block;
+        }          
+      
+        .cols2 h1, 
+        .cols2 h2, 
+        .cols2 h3, 
+        .cols2 h4, 
+        .cols2 h5, 
+        .cols2 h6, 
+        .cols2 img,
+        .cols3 h1, 
+        .cols3 h2, 
+        .cols3 h3, 
+        .cols3 h4, 
+        .cols3 h5, 
+        .cols3 h6, 
+        .cols3 img
+        .cols4 h1, 
+        .cols4 h2, 
+        .cols4 h3, 
+        .cols4 h4, 
+        .cols4 h5, 
+        .cols4 h6, 
+        .cols4 img {
+           -webkit-column-span: all;
+               column-span: all;
+        }
 
 } 
 

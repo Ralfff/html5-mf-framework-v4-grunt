@@ -1,7 +1,7 @@
 <?php 
 
 	//IMPORTS 
-	require_once('custom-post-functions.php');
+	require_once('functions-custom-post-types.php'); 
 	
 	//SUPPORTS 
 	add_theme_support( 'post-thumbnails' );
@@ -79,6 +79,12 @@
       add_image_size( 'home-slide','1024' ); // name, width, height, crop
     }
 
+    add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+        function my_custom_sizes( $sizes ) {
+            return array_merge( $sizes, array(
+                'home-slide' => __( 'Home Slide' )
+            ) );
+        }
 
 	//CUSTOM PASSWORD-PROTECTED AREA FORM
     add_filter( 'the_password_form', 'custom_password_form' );

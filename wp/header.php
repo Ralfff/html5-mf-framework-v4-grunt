@@ -49,7 +49,7 @@
 			<div class="frame clear">
 				<a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" class="logo clear"></a>
 				<nav class="main-nav clear">
-					<?php wp_nav_menu( array('theme-location' => 'main-nav' )); ?>
+					<?php wp_nav_menu( array('theme_location' => 'main-nav' )); ?>
 				</nav>
 	
 				<div class="menu-button">

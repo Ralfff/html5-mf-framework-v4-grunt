@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 
     watch: {
       scripts: {
-        files: ['dev/js/*.js'],
+        files: ['dev/js/modernizr.custom.js','dev/js/jquery.js','dev/js/plugins/*.js'],
         tasks: ['uglify:deploy'],
         options: {
           spawn: false,
@@ -84,6 +84,8 @@ module.exports = function(grunt) {
               '*.html',
               'style.css',
               'style.min.css',
+              'preview-styles.css',
+              'modernizr.custom.js',
               'js/scripts.min.js',
               'js/custom.js',
               'images/**',

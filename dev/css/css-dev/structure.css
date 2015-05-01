@@ -11,19 +11,10 @@
   width: 100%;
   overflow: hidden;
 }
-      
-  header {
-    position: relative;
-    z-index: 1100;
-  } 
   
   .content {
     position: relative;
   } 
-  
-  footer {
-    position: relative;
-  }
   
     .frame, 
     [class*=frame-] { /*frame, contains Content-Modules, no padding!*/

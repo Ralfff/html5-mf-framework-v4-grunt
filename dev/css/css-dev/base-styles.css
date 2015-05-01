@@ -71,15 +71,17 @@ a {
     outline: 0;
     color: inherit;
 }
-  .no-touch a:hover, a:focus {
-
+  .no-touch a:hover, 
+  a:focus { 
+    
   }
 
   a:active {
 
   }
 
-  .no-touch button:hover, button:focus {
+  .no-touch button:hover, 
+  button:focus {
     background: #aaa;
   }
 
@@ -169,16 +171,6 @@ button{
   font-size: inherit;
 } 
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
-input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
-input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
-
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
-textarea:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
-textarea:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
-
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -197,43 +189,57 @@ textarea {
   textarea:focus {
     outline: none;
     background: #fafafa;
-  }
+  } 
+
+  input:focus::-webkit-input-placeholder, 
+  input:focus:-moz-placeholder,  
+  input:focus::-moz-placeholder,   
+  input:focus:-ms-input-placeholder { 
+    color:transparent; 
+  } 
+  
+  textarea:focus::-webkit-input-placeholder, 
+  textarea:focus:-moz-placeholder,  
+  textarea:focus::-moz-placeholder,    
+  textarea:focus:-ms-input-placeholder { 
+    color:transparent; 
+  } 
 
   ::-webkit-selection { background: #aaa; color: #fff; }
      ::-moz-selection { background: #aaa; color: #fff; }
           ::selection { background: #aaa; color: #fff; }
 
-         h1::-webkit-selection { color: #222222; }
-            h1::-moz-selection { color: #222222; }
-                 h1::selection { color: #222222; }
+         h1::-webkit-selection { color: #222; }
+            h1::-moz-selection { color: #222; }
+                 h1::selection { color: #222; }
 
-         h2::-webkit-selection { color: #222222; }
-            h2::-moz-selection { color: #222222; }
-                 h2::selection { color: #222222; }
+         h2::-webkit-selection { color: #222; }
+            h2::-moz-selection { color: #222; }
+                 h2::selection { color: #222; }
 
-         h3::-webkit-selection { color: #222222; }
-            h3::-moz-selection { color: #222222; }
-                 h3::selection { color: #222222; }
+         h3::-webkit-selection { color: #222; }
+            h3::-moz-selection { color: #222; }
+                 h3::selection { color: #222; }
 
-         h4::-webkit-selection { color: #222222; }
-            h4::-moz-selection { color: #222222; }
-                 h4::selection { color: #222222; }
+         h4::-webkit-selection { color: #222; }
+            h4::-moz-selection { color: #222; }
+                 h4::selection { color: #222; }
 
-         h5::-webkit-selection { color: #222222; }
-            h5::-moz-selection { color: #222222; }
-                 h5::selection { color: #222222; }
+         h5::-webkit-selection { color: #222; }
+            h5::-moz-selection { color: #222; }
+                 h5::selection { color: #222; }
 
-         h6::-webkit-selection { color: #222222; }
-            h6::-moz-selection { color: #222222; }
-                 h6::selection { color: #222222; }
+         h6::-webkit-selection { color: #222; }
+            h6::-moz-selection { color: #222; }
+                 h6::selection { color: #222; }
 
-          a::-webkit-selection { color: #222222; }
-             a::-moz-selection { color: #222222; }
-                  a::selection { color: #222222; }
+          a::-webkit-selection { color: #222; }
+             a::-moz-selection { color: #222; }
+                  a::selection { color: #222; }
 
- blockquote::-webkit-selection { color: #222222; }
-    blockquote::-moz-selection { color: #222222; }
-         blockquote::selection { color: #222222; } 
+ blockquote::-webkit-selection { color: #222; }
+    blockquote::-moz-selection { color: #222; }
+         blockquote::selection { color: #222; } 
 
 /*FONT AND COLOR CLASSES
 **************************************************************/
@@ -252,13 +258,13 @@ textarea {
 .base-color {        color: #ccc;} 
 .base-bg {background-color: #ccc;} 
 
-.body-color {        color: #888;}
-.body-bg {background-color: #888;} 
+.body-color {        color: #444;}
+.body-bg {background-color: #444;} 
 
 .accent-color {        color: #f00;} 
 .accent-bg {background-color: #f00;} 
 
-.soft-color {        color: #faa;} 
-.soft-bg {background-color: #faa;} 
+.soft-color {        color: #fbb;} 
+.soft-bg {background-color: #fbb;} 
 
 
