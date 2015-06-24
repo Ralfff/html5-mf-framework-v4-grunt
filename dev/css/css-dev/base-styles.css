@@ -87,7 +87,8 @@ a {
 
   button:active {
       background: #000;
-      color: #fff;
+      color: #fff; 
+      cursor: pointer;
   }
 
 em {
@@ -181,6 +182,10 @@ textarea {
   background: #eee;
   padding: 5px 10px;
   margin-bottom: 20px;
+} 
+
+input[type="submit"] {
+  cursor: pointer;
 }
 
   input[type="text"]:focus,

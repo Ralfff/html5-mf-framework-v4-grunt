@@ -85,7 +85,7 @@ module.exports = function(grunt) {
               'style.css',
               'style.min.css',
               'preview-styles.css',
-              'modernizr.custom.js',
+              'js/modernizr.custom.js',
               'js/scripts.min.js',
               'js/custom.js',
               'images/**',

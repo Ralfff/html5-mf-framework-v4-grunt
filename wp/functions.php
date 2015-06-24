@@ -1,8 +1,8 @@
 <?php 
 
 	//IMPORTS 
-	require_once('functions-custom-post-types.php'); 
-	
+	require_once('functions-custom_post_types.php'); 
+
 	//SUPPORTS 
 	add_theme_support( 'post-thumbnails' );
 	
@@ -189,7 +189,10 @@
         
           return $title;
         }
-        add_filter( 'wp_title', 'theme_name_wp_title', 10, 2 );
+        add_filter( 'wp_title', 'theme_name_wp_title', 10, 2 ); 
+
+      //Disable img compression 
+        add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
         	
 
 ?>

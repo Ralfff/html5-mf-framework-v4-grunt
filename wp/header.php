@@ -52,14 +52,7 @@
 					<?php wp_nav_menu( array('theme_location' => 'main-nav' )); ?>
 				</nav>
 	
-				<div class="menu-button">
-					<a class="open-menu icon" href="#">&#xe001;</a> 
-					<a class="close-menu icon" href="#">&#xe025;</a>
-				</div> 
-				<div class="side-button">
-					<a class="open-side icon" href="#">&#xe024;</a> 
-					<a class="close-side icon" href="#">&#xe025;</a>
-				</div>
+				<button type="button" class="menu-button" href="#"></button> 
 			</div> <!--END FRAME-->
 		</header><!-- END HEADER -->
 
