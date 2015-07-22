@@ -3,6 +3,9 @@
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>" />
+	<meta name="description" content="" />
+	<meta name="MobileOptimized" content="320">
+	<meta name="HandheldFriendly" content="True">
 	
 	<?php if (is_search()) { ?>
 	   <meta name="robots" content="noindex, nofollow" /> 
