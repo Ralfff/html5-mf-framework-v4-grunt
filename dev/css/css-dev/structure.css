@@ -22,6 +22,55 @@
       max-width: 1000px;
       margin: 0 auto;
     } 
+
+      .module, 
+      [class*=module-] { /*module, lives inside .frame, contains  */
+        padding: 25px;
+      } 
+
+      /* 
+
+        section: always full width, contains frames that belong together, can have full-width-bg; 
+        .frame: defines content width, contains page modules, often centered (margin: 0 auto);
+        .module: contains elements that belong together, can have padding; 
+        .half, 
+        .third, 
+        .quarter: special modules, that are mainly used for grids. if used inside modules, containing module should have no padding; 
+
+        _____________
+        How it works: 
+
+        section___________________________________________________________
+        |          .frame______________________________________           |
+        |          |      .module________________________      |          |
+        |          |      |                              |     |          |                               
+        |          |      |  elments, forms...           |     |          |
+        |          |      |  modules have padding,       |     |          |
+        |          |      |  sections and frames not     |     |          |
+        |          |      |______________________________|     |          |                                                  
+        |          |___________________________________________|          |
+        |          .frame______________________________________           |
+        |          |      .half__________.half___________      |          |
+        |          |      |              |               |     |          |                               
+        |          |      |              |               |     |          |
+        |          |      |              |               |     |          |
+        |          |      |              |               |     |          |
+        |          |      |______________|_______________|     |          |                                                  
+        |          |___________________________________________|          |
+        |_________________________________________________________________|
+        section___________________________________________________________                                                                               
+        |          .frame______________________________________           |
+        |          |      .half__________.half___________      |          |
+        |          |      |              |               |     |          |                               
+        |          |      |              |               |     |          |
+        |          |      |              |               |     |          |
+        |          |      |              |               |     |          |
+        |          |      |______________|_______________|     |          |                                                  
+        |          |___________________________________________|          |
+        |_________________________________________________________________|
+      */
+
+
   
 /*GRID 
 **************************************************************/
@@ -45,16 +94,16 @@
     width: 33.333333%;
     float: left;}
 
-  .third.double {
-    width: 66.666666%;
-    float: left;}
+    .third.double {
+      width: 66.666666%;
+      float: left;}
   
   .quarter {
     width: 25.000000%;
     float: left;}
 
-  .quarter.triple {
-    width: 75.000000%;
-    float: left;} 
+    .quarter.triple {
+      width: 75.000000%;
+      float: left;} 
 
 }

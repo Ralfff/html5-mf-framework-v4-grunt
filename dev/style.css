@@ -193,6 +193,10 @@ a {
 
   }
 
+  button {
+    cursor: pointer;
+  }
+
   .no-touch button:hover, 
   button:focus {
     background: #aaa;
@@ -201,7 +205,6 @@ a {
   button:active {
       background: #000;
       color: #fff; 
-      cursor: pointer;
   }
 
 em {
@@ -262,12 +265,13 @@ video {
 }
 
 blockquote {
-  font-family: times;
-  font-size: 125%;
-  font-style: italic;
-  line-height: 1.3;
-  margin: 30px 0;
-}
+  font-size: 20px; 
+} 
+
+  blockquote > p {
+    font-size: 20px; 
+    line-height: 1.3;
+  }
 
   .bq-ref {
     font-size: .8em;
@@ -290,23 +294,23 @@ input[type="email"],
 input[type="tel"],
 textarea {
   display: block;
+  cursor: pointer;
   width: 100%;
-  border: none;
+  border: 1px solid #000;
   background: #eee;
   padding: 5px 10px;
   margin-bottom: 20px;
 } 
 
 input[type="submit"] {
-  cursor: pointer;
+  
 }
 
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="tel"]:focus,
   textarea:focus {
-    outline: none;
-    background: #fafafa;
+
   } 
 
   input:focus::-webkit-input-placeholder, 
@@ -323,7 +327,7 @@ input[type="submit"] {
     color:transparent; 
   } 
 
-  ::-webkit-selection { background: #aaa; color: #fff; }
+/*  ::-webkit-selection { background: #aaa; color: #fff; }
      ::-moz-selection { background: #aaa; color: #fff; }
           ::selection { background: #aaa; color: #fff; }
 
@@ -357,7 +361,7 @@ input[type="submit"] {
 
  blockquote::-webkit-selection { color: #222; }
     blockquote::-moz-selection { color: #222; }
-         blockquote::selection { color: #222; } 
+         blockquote::selection { color: #222; } */
 
 /*FONT AND COLOR CLASSES
 **************************************************************/
@@ -413,6 +417,55 @@ input[type="submit"] {
       max-width: 1000px;
       margin: 0 auto;
     } 
+
+      .module, 
+      [class*=module-] { /*module, lives inside .frame, contains  */
+        padding: 25px;
+      } 
+
+      /* 
+
+        section: always full width, contains frames that belong together, can have full-width-bg; 
+        .frame: defines content width, contains page modules, often centered (margin: 0 auto);
+        .module: contains elements that belong together, can have padding; 
+        .half, 
+        .third, 
+        .quarter: special modules, that are mainly used for grids. if used inside modules, containing module should have no padding; 
+
+        _____________
+        How it works: 
+
+        section___________________________________________________________
+        |          .frame______________________________________           |
+        |          |      .module________________________      |          |
+        |          |      |                              |     |          |                               
+        |          |      |  elments, forms...           |     |          |
+        |          |      |  modules have padding,       |     |          |
+        |          |      |  sections and frames not     |     |          |
+        |          |      |______________________________|     |          |                                                  
+        |          |___________________________________________|          |
+        |          .frame______________________________________           |
+        |          |      .half__________.half___________      |          |
+        |          |      |              |               |     |          |                               
+        |          |      |              |               |     |          |
+        |          |      |              |               |     |          |
+        |          |      |              |               |     |          |
+        |          |      |______________|_______________|     |          |                                                  
+        |          |___________________________________________|          |
+        |_________________________________________________________________|
+        section___________________________________________________________                                                                               
+        |          .frame______________________________________           |
+        |          |      .half__________.half___________      |          |
+        |          |      |              |               |     |          |                               
+        |          |      |              |               |     |          |
+        |          |      |              |               |     |          |
+        |          |      |              |               |     |          |
+        |          |      |______________|_______________|     |          |                                                  
+        |          |___________________________________________|          |
+        |_________________________________________________________________|
+      */
+
+
   
 /*GRID 
 **************************************************************/
@@ -436,17 +489,17 @@ input[type="submit"] {
     width: 33.333333%;
     float: left;}
 
-  .third.double {
-    width: 66.666666%;
-    float: left;}
+    .third.double {
+      width: 66.666666%;
+      float: left;}
   
   .quarter {
     width: 25.000000%;
     float: left;}
 
-  .quarter.triple {
-    width: 75.000000%;
-    float: left;} 
+    .quarter.triple {
+      width: 75.000000%;
+      float: left;} 
 
 } 
 
@@ -501,24 +554,24 @@ header {
   display: none;
 }
 
-.js .menu-button, 
-.js .menu-button:hover { 
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px; 
-  border: none;
-  background: transparent url('images/interface/open-menu-bg.png') center center no-repeat; 
-  background-size: 20px;
-} 
-
-.nav-open .menu-button, 
-.nav-open .menu-button:hover {
-  background: url('images/interface/close-menu-bg.png') center center no-repeat; 
-  background-size: 20px;
-} 
+  .js .menu-button, 
+  .js .menu-button:hover { 
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px; 
+    border: none;
+    background: transparent url('images/interface/open-menu-bg.png') center center no-repeat; 
+    background-size: 20px;
+  } 
+  
+    .nav-open .menu-button, 
+    .nav-open .menu-button:hover {
+      background: url('images/interface/close-menu-bg.png') center center no-repeat; 
+      background-size: 20px;
+    } 
 
 @media screen and (min-width: 600px) {
 
