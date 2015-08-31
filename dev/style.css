@@ -425,9 +425,12 @@ input[type="submit"] {
 
       /* 
 
-        section: always full width, contains frames that belong together, can have full-width-bg; 
-        .frame: defines content width, contains page modules, often centered (margin: 0 auto);
-        .module: contains elements that belong together, can have padding; 
+        section:  always full width, contains frames that belong together, can have full-width-bg; 
+
+        .frame:   defines content width, contains page modules, often centered (margin: 0 auto);
+
+        .module:  contains elements that belong together, can have padding; 
+                  modules can be: widgets, forms, author-info, search-field, intro, slideshow, etc.;
         .half, 
         .third, 
         .quarter: special modules, that are mainly used for grids. if used inside modules, containing module should have no padding; 
@@ -444,7 +447,7 @@ input[type="submit"] {
         |          |      |  sections and frames not     |     |          |
         |          |      |______________________________|     |          |                                                  
         |          |___________________________________________|          |
-        |          .frame______________________________________           |
+        |          .frame.clear________________________________           |
         |          |      .half__________.half___________      |          |
         |          |      |              |               |     |          |                               
         |          |      |              |               |     |          |
@@ -454,13 +457,13 @@ input[type="submit"] {
         |          |___________________________________________|          |
         |_________________________________________________________________|
         section___________________________________________________________                                                                               
-        |          .frame______________________________________           |
-        |          |      .half__________.half___________      |          |
-        |          |      |              |               |     |          |                               
-        |          |      |              |               |     |          |
-        |          |      |              |               |     |          |
-        |          |      |              |               |     |          |
-        |          |      |______________|_______________|     |          |                                                  
+        |          .frame.clear________________________________           |
+        |          |      .quarter_.third________________      |          |
+        |          |      |        |                     |     |          |                               
+        |          |      |        |                     |     |          |
+        |          |      |        |                     |     |          |
+        |          |      |        |                     |     |          |
+        |          |      |________|_____________________|     |          |                                                  
         |          |___________________________________________|          |
         |_________________________________________________________________|
       */
