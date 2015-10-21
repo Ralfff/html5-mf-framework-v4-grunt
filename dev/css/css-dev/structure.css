@@ -28,14 +28,22 @@
         padding: 25px;
       } 
 
-      /* 
 
+        .page-pad, 
+        .page-padding { /* adds l/r padding to element */
+          padding: 25px;
+        } 
+
+      /* 
         section:  always full width, contains frames that belong together, can have full-width-bg; 
 
         .frame:   defines content width, contains page modules, often centered (margin: 0 auto);
 
         .module:  contains elements that belong together, can have padding; 
-                  modules can be: widgets, forms, author-info, search-field, intro, slideshow, etc.;
+                  modules can be: widgets, forms, author-info, search-field, intro, slideshow, etc.; 
+
+        .page-pad: adds left & right padding to element; 
+                    reccomenden for full-width modules, outer padding, so the content doesn’t stick to the window; 
         .half, 
         .third, 
         .quarter: special modules, that are mainly used for grids. if used inside modules, containing module should have no padding; 
@@ -83,7 +91,6 @@
 .quarter, .quarter.triple  { 
   width: 100%;
   position: relative;
-  padding: 25px;
   float: none;
 } 
 

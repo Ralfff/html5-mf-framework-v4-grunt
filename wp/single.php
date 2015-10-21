@@ -22,6 +22,11 @@
 				
 							</div>
 							
+							<div class="clear prev-next-container">
+								<div class="half"><?php previous_post_link(); ?></div>
+								<div class="half align-right"><?php next_post_link(); ?></div>
+							</div>
+							
 							<?php edit_post_link('Seite bearbeiten.', '<p>', '</p>'); ?>
 							
 						</div>

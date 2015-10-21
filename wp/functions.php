@@ -7,7 +7,7 @@
 	add_theme_support( 'post-thumbnails' );
 	
 	// Add RSS links to <head> section
-	automatic_feed_links(); 
+  //add_theme_support( 'automatic-feed-links' );
 	
 	// CUSTOM WORDPRESS LOGIN CSS
 	function login_css() {
@@ -15,19 +15,23 @@
 	}
 	add_action('login_head', 'login_css');
 	
-	//LOAD SCRIPTS 
-	if ( !is_admin() ) {
-      wp_register_script('modernizr', get_bloginfo('template_directory') . "/js/modernizr.custom.js"); // modernizr.js  
-      wp_enqueue_script('modernizr'); //modernizr anmelden 
-
-      wp_deregister_script('jquery');//jQuery aus der WP Library abmelden...
-      wp_register_script('jquery', get_bloginfo('template_directory') . "/js/jquery.js" , false); //...neue Quelle für jQuery angeben 
-      wp_enqueue_script('jquery'); //jquery anmelden 
-		  wp_register_script('plugins-js', get_bloginfo('template_directory') . "/js/plugins.min.js"); // plugins, minified 
-		  wp_enqueue_script('plugins-js'); //custom anmelden 
-      wp_register_script('custom', get_bloginfo('template_directory') . "/js/custom.js"); // custom.js minified 
-      wp_enqueue_script('custom'); //custom anmelden 	
+  //REGISTER SCRIPTS 
+    function custom_scripts() {
+    if (!is_admin()) {
+  
+          wp_register_script('modernizr', get_bloginfo('template_directory') . "/js/modernizr.custom.js");
+          wp_enqueue_script( 'modernizr' );
+          wp_deregister_script( 'jquery' );
+          wp_register_script('jquery', get_bloginfo('template_directory') . "/js/jquery.js" , false); //...neue Quelle für jQuery angeben 
+          wp_enqueue_script( 'jquery' );
+          wp_register_script('plugins-js', get_bloginfo('template_directory') . "/js/plugins.min.js"); // plugins, minified 
+          wp_enqueue_script( 'plugins-js' );
+          wp_register_script('custom', get_bloginfo('template_directory') . "/js/custom.js"); // custom.js minified 
+          wp_enqueue_script( 'custom' );
+      }
     }
+    add_action( 'wp_enqueue_scripts', 'custom_scripts' );
+  
 	
 	// Clean up the <head>
 	function removeHeadLinks() {
@@ -194,7 +198,13 @@
         add_filter( 'wp_title', 'theme_name_wp_title', 10, 2 ); 
 
       //Disable img compression 
-        add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
+        add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) ); 
+
+
+        function remove_version() {
+          return '';
+        }
+        add_filter('the_generator', 'remove_version');
         	
 
 ?>

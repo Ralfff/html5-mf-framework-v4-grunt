@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>" />
-	<meta name="description" content="" />
 	<meta name="MobileOptimized" content="320">
 	<meta name="HandheldFriendly" content="True">
 	
@@ -13,24 +12,11 @@
 
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 
-	<!-- disables scaling for responsive sites -->
+	<!-- optimized scaling for responsive sites -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-<!-- iOS icons -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/apple-touch-icon-144x144-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/apple-touch-icon-114x114-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/apple-touch-icon-72x72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/apple-touch-icon-57x57-precomposed.png">
-	
-	<!-- Tile icon for Win8 (144x144 + tile color) -->
-	<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/ms-touch-icon-144x144-precomposed.png">
-	<meta name="msapplication-TileColor" content="#009bdf"> 
-	
-	<!-- Chrome Add to Homescreen -->
-	<link rel="shortcut icon" sizes="196x196" href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/touch-icon-196x196.png">
-	
 	<!-- Generic Icon -->
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/touch-icon-57x57.png">
+	<?php wp_site_icon(); ?>
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
