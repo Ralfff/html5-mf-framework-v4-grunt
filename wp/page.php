@@ -12,7 +12,7 @@
 				
 							<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 				
-							<div class="entry">
+							<div class="entry clear">
 				
 								<?php the_content(); ?>
 				

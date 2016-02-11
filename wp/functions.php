@@ -5,6 +5,7 @@
 
 	//SUPPORTS 
 	add_theme_support( 'post-thumbnails' );
+  // add_theme_support( 'title-tag' );
 	
 	// Add RSS links to <head> section
   //add_theme_support( 'automatic-feed-links' );

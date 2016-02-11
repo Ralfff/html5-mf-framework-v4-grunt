@@ -29,14 +29,14 @@
 	
 </head>
 
-<body <?php body_class('pop-in'); ?>>
+<body <?php body_class(); ?>>
 	
 	<div class="container clear"> 
 
 	
 		<header>
 			<div class="frame clear">
-				<a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" class="logo clear"></a>
+				<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" class="logo clear"></a>
 				<nav class="main-nav clear">
 					<?php wp_nav_menu( array('theme_location' => 'main-nav' )); ?>
 				</nav>
