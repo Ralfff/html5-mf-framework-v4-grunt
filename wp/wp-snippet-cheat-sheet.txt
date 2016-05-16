@@ -1,0 +1,3 @@
+- CUSTOM POST TYPES (Tab-trigger: cp+tab) 
+- CUSTOM TAXONOMY 	(Tab-trigger: ct+tab) 
+- WP IMAGE PATH 	(Tab-trigger: wpimg+tab)

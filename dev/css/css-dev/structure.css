@@ -1,6 +1,55 @@
 /* ========================================================= */
 /* = =================PAGE STRUCTURE====================== = */
-/* ========================================================= */
+/* ========================================================= */ 
+/* Basic Page Structure (Container and Frame Sizes, standard-Padding etc...)
+
+  section:  always full width, contains frames that belong together, can have full-width-bg; 
+
+  .frame:   defines content width, contains page modules, often centered (margin: 0 auto);
+
+  .module:  contains elements that belong together, can have padding; 
+            modules can be: widgets, forms, author-info, search-field, intro, slideshow, etc.; 
+
+  .page-pad: adds left & right padding to element; 
+              reccomenden for full-width modules, outer padding, so the content doesn’t stick to the window; 
+  .half, 
+  .third, 
+  .quarter: special modules, that are mainly used for grids. if used inside modules, containing module should have no padding; 
+
+  _____________
+  How it works: 
+
+  section___________________________________________________________
+  |          .frame______________________________________           |
+  |          |      .module________________________      |          |
+  |          |      |                              |     |          |                               
+  |          |      |  elments, forms...           |     |          |
+  |          |      |  modules have padding,       |     |          |
+  |          |      |  sections and frames not     |     |          |
+  |          |      |______________________________|     |          |                                                  
+  |          |___________________________________________|          |
+  |          .frame.clear________________________________           |
+  |          |      .half__________.half___________      |          |
+  |          |      |              |               |     |          |                               
+  |          |      |              |               |     |          |
+  |          |      |              |               |     |          |
+  |          |      |              |               |     |          |
+  |          |      |______________|_______________|     |          |                                                  
+  |          |___________________________________________|          |
+  |_________________________________________________________________|
+  section___________________________________________________________                                                                               
+  |          .frame.clear________________________________           |
+  |          |      .quarter_.third________________      |          |
+  |          |      |        |                     |     |          |                               
+  |          |      |        |                     |     |          |
+  |          |      |        |                     |     |          |
+  |          |      |        |                     |     |          |
+  |          |      |________|_____________________|     |          |                                                  
+  |          |___________________________________________|          |
+  |_________________________________________________________________|
+*/
+
+
 
 /*PAGE-SEGMENTS
 **************************************************************/
@@ -33,53 +82,6 @@
         .page-padding { /* adds l/r padding to element */
           padding: 25px;
         } 
-
-      /* 
-        section:  always full width, contains frames that belong together, can have full-width-bg; 
-
-        .frame:   defines content width, contains page modules, often centered (margin: 0 auto);
-
-        .module:  contains elements that belong together, can have padding; 
-                  modules can be: widgets, forms, author-info, search-field, intro, slideshow, etc.; 
-
-        .page-pad: adds left & right padding to element; 
-                    reccomenden for full-width modules, outer padding, so the content doesn’t stick to the window; 
-        .half, 
-        .third, 
-        .quarter: special modules, that are mainly used for grids. if used inside modules, containing module should have no padding; 
-
-        _____________
-        How it works: 
-
-        section___________________________________________________________
-        |          .frame______________________________________           |
-        |          |      .module________________________      |          |
-        |          |      |                              |     |          |                               
-        |          |      |  elments, forms...           |     |          |
-        |          |      |  modules have padding,       |     |          |
-        |          |      |  sections and frames not     |     |          |
-        |          |      |______________________________|     |          |                                                  
-        |          |___________________________________________|          |
-        |          .frame.clear________________________________           |
-        |          |      .half__________.half___________      |          |
-        |          |      |              |               |     |          |                               
-        |          |      |              |               |     |          |
-        |          |      |              |               |     |          |
-        |          |      |              |               |     |          |
-        |          |      |______________|_______________|     |          |                                                  
-        |          |___________________________________________|          |
-        |_________________________________________________________________|
-        section___________________________________________________________                                                                               
-        |          .frame.clear________________________________           |
-        |          |      .quarter_.third________________      |          |
-        |          |      |        |                     |     |          |                               
-        |          |      |        |                     |     |          |
-        |          |      |        |                     |     |          |
-        |          |      |        |                     |     |          |
-        |          |      |________|_____________________|     |          |                                                  
-        |          |___________________________________________|          |
-        |_________________________________________________________________|
-      */
 
 
   

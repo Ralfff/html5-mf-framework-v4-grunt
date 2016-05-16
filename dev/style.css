@@ -5,9 +5,9 @@ Theme URI:
 Description: Customized Theme for seamless, customized Theme Development.  
 Author: Ralf Hoffmeister
 Author URI: http://ralfhoffmeister.de
-Version: 3.4 (07-2014)
+Version: 3.4.2 (05-2016)
 Created and Maintained by Ralf Hoffmeister
-Copyright 2012—2014 __Ralf Hoffmeister__ All rights reserved.
+Copyright 2012—2016 __Ralf Hoffmeister__ All rights reserved.
 */
 
 /* CSS Document */
@@ -37,8 +37,16 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}tabl
 
 
 /* ========================================================= */
-/* = ==================== MODULES ======================== = */
-/* ========================================================= */
+/* = ==================== PLUGINS ======================== = */
+/* ========================================================= */ 
+/*Base Styles for third party plugins e.g. Slider, Lightbox*/
+
+ 
+
+
+/* ========== */
+/* = HELPER = */
+/* ========== */ 
 
 /*MISC
 **************************************************************/
@@ -108,12 +116,136 @@ button {
     border-left: 5px solid #0f0; 
     padding-left: 10px;
   }
+
+
+/*TYPOGRAPHY & LAYOUT
+**************************************************************/
+
+/*size*/
+.small { font-size: .75em; }
+.medium { font-size: 1.5em; }
+.large { font-size: 2em; }
+.x-large { font-size: 2.5em; }
+
+/*alignment*/
+.align-center { text-align: center; }
+.align-justify { text-align: justify; }
+.align-right { text-align: right; }
+.align-left {text-align: left; }
+
+/*styling*/
+.drop-cap {
+  font-size: 3em;
+  line-height: 1;
+  font-weight: 600;
+  padding: 2px 8px 0 0;
+  float: left; }
+.run-in { font-weight: bold;}
+.italic {font-style: italic;}
+.bold {font-weight: 700;}
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+
+/*other*/
+.hide-text {border: 0;font: 0/0 a;text-shadow: none;color: transparent;}
+
+.smooth {-webkit-font-smoothing: antialiased;}
+.sub-smooth {-webkit-font-smoothing: subpixel-antialiased;} 
+
+.r-br {display: none;} /*responsive line break - no break on mobile*/
+
+.cols2, 
+.cols3, 
+.cols4 {
+  max-width: 780px;
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  -ms-column-count: 1;
+  column-count: 1;} 
+
+
+
+@media screen and (min-width: 600px) {
+
+  .r-br {display: block;} /*responsive line break*/
+
+  .cols2 {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+        -ms-column-count: 2;
+            column-count: 2;}
+  
+  .cols3 {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+        -ms-column-count: 3;
+            column-count: 3;}
+  
+  .cols4 {
+    -webkit-column-count: 4;
+       -moz-column-count: 4;
+        -ms-column-count: 4;
+            column-count: 4;} 
+
+      .cols2 p, 
+      .cols3 p, 
+      .cols4 p {
+          padding-top: 0; 
+          padding-bottom: 1em;
+          display: inline-block;
+        }          
+      
+        .cols2 h1, 
+        .cols2 h2, 
+        .cols2 h3, 
+        .cols2 h4, 
+        .cols2 h5, 
+        .cols2 h6, 
+        .cols2 img,
+        .cols3 h1, 
+        .cols3 h2, 
+        .cols3 h3, 
+        .cols3 h4, 
+        .cols3 h5, 
+        .cols3 h6, 
+        .cols3 img
+        .cols4 h1, 
+        .cols4 h2, 
+        .cols4 h3, 
+        .cols4 h4, 
+        .cols4 h5, 
+        .cols4 h6, 
+        .cols4 img {
+          -webkit-column-span: all;
+                  column-span: all;
+        }
+
+} 
+
+/*DISPLAY OPTIONS
+**************************************************************/
+
+/*floats*/
+.left {float: left;}
+.right {float: right;}
+
+/*display*/
+.block {display: block;}
+.inline {display: inline;}
+
+/*position*/
+.fixed {position: fixed;}
+.absolute {position: absolute;}
+.relative {position: relative;}
+.static {position: static;} 
+
  
 
 
 /* ========================================================= */
 /* = ===================== BASE STYLES =================== = */
-/* ========================================================= */
+/* ========================================================= */ 
+/*Basic Styling for Headlines, Forms, links etc. */
 
  html {
   min-height: 100%;
@@ -127,7 +259,7 @@ body {
   min-height: 100%;
   font-family: Verdana, sans-serif;
   font-size: 100%;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 p {
@@ -395,7 +527,56 @@ input[type="submit"] {
 
 /* ========================================================= */
 /* = =================PAGE STRUCTURE====================== = */
-/* ========================================================= */
+/* ========================================================= */ 
+/* Basic Page Structure (Container and Frame Sizes, standard-Padding etc...)
+
+  section:  always full width, contains frames that belong together, can have full-width-bg; 
+
+  .frame:   defines content width, contains page modules, often centered (margin: 0 auto);
+
+  .module:  contains elements that belong together, can have padding; 
+            modules can be: widgets, forms, author-info, search-field, intro, slideshow, etc.; 
+
+  .page-pad: adds left & right padding to element; 
+              reccomenden for full-width modules, outer padding, so the content doesn’t stick to the window; 
+  .half, 
+  .third, 
+  .quarter: special modules, that are mainly used for grids. if used inside modules, containing module should have no padding; 
+
+  _____________
+  How it works: 
+
+  section___________________________________________________________
+  |          .frame______________________________________           |
+  |          |      .module________________________      |          |
+  |          |      |                              |     |          |                               
+  |          |      |  elments, forms...           |     |          |
+  |          |      |  modules have padding,       |     |          |
+  |          |      |  sections and frames not     |     |          |
+  |          |      |______________________________|     |          |                                                  
+  |          |___________________________________________|          |
+  |          .frame.clear________________________________           |
+  |          |      .half__________.half___________      |          |
+  |          |      |              |               |     |          |                               
+  |          |      |              |               |     |          |
+  |          |      |              |               |     |          |
+  |          |      |              |               |     |          |
+  |          |      |______________|_______________|     |          |                                                  
+  |          |___________________________________________|          |
+  |_________________________________________________________________|
+  section___________________________________________________________                                                                               
+  |          .frame.clear________________________________           |
+  |          |      .quarter_.third________________      |          |
+  |          |      |        |                     |     |          |                               
+  |          |      |        |                     |     |          |
+  |          |      |        |                     |     |          |
+  |          |      |        |                     |     |          |
+  |          |      |________|_____________________|     |          |                                                  
+  |          |___________________________________________|          |
+  |_________________________________________________________________|
+*/
+
+
 
 /*PAGE-SEGMENTS
 **************************************************************/
@@ -428,53 +609,6 @@ input[type="submit"] {
         .page-padding { /* adds l/r padding to element */
           padding: 25px;
         } 
-
-      /* 
-        section:  always full width, contains frames that belong together, can have full-width-bg; 
-
-        .frame:   defines content width, contains page modules, often centered (margin: 0 auto);
-
-        .module:  contains elements that belong together, can have padding; 
-                  modules can be: widgets, forms, author-info, search-field, intro, slideshow, etc.; 
-
-        .page-pad: adds left & right padding to element; 
-                    reccomenden for full-width modules, outer padding, so the content doesn’t stick to the window; 
-        .half, 
-        .third, 
-        .quarter: special modules, that are mainly used for grids. if used inside modules, containing module should have no padding; 
-
-        _____________
-        How it works: 
-
-        section___________________________________________________________
-        |          .frame______________________________________           |
-        |          |      .module________________________      |          |
-        |          |      |                              |     |          |                               
-        |          |      |  elments, forms...           |     |          |
-        |          |      |  modules have padding,       |     |          |
-        |          |      |  sections and frames not     |     |          |
-        |          |      |______________________________|     |          |                                                  
-        |          |___________________________________________|          |
-        |          .frame.clear________________________________           |
-        |          |      .half__________.half___________      |          |
-        |          |      |              |               |     |          |                               
-        |          |      |              |               |     |          |
-        |          |      |              |               |     |          |
-        |          |      |              |               |     |          |
-        |          |      |______________|_______________|     |          |                                                  
-        |          |___________________________________________|          |
-        |_________________________________________________________________|
-        section___________________________________________________________                                                                               
-        |          .frame.clear________________________________           |
-        |          |      .quarter_.third________________      |          |
-        |          |      |        |                     |     |          |                               
-        |          |      |        |                     |     |          |
-        |          |      |        |                     |     |          |
-        |          |      |        |                     |     |          |
-        |          |      |________|_____________________|     |          |                                                  
-        |          |___________________________________________|          |
-        |_________________________________________________________________|
-      */
 
 
   
@@ -514,23 +648,35 @@ input[type="submit"] {
 } 
 
 
+/* ========================================================= */
+/* = ==================== MODULES ======================== = */
+/* ========================================================= */
+/*
+specific Layout-Modules and Components. keep it light, specifics and variations will be defined in content.css
+(Class-Name System: .moduleName-componentName-state)
+*/ 
+ 
+
+
 /* ========== */
 /* = HEADER = */
-/* ========== */
+/* ========== */ 
+/*Header stuff (Navigation, Logo etc.)*/
 
 header {
   position: relative;
   z-index: 10;
 } 
 
-.logo {
+.logo { 
+  display: block;
   text-decoration: none;
 } 
 
 /*Main-Nav*/
 .js .main-nav { 
   height: auto; 
-  max-height: 1px; 
+  max-height: 0px; 
   overflow: hidden; 
   -webkit-transition: all .25s ease-in-out;
      -moz-transition: all .25s ease-in-out;
@@ -540,7 +686,7 @@ header {
 } 
 
 .js .nav-open .main-nav { 
-  max-height: 400px; 
+  max-height: 1000px; 
 }
 
   .main-nav ul {
@@ -603,6 +749,7 @@ header {
 /* =========== */
 /* = CONTENT = */
 /* =========== */ 
+/*Content Styling for Page Templates, e.g. variations from the module section*/ 
 
 
 /* ========== */
@@ -614,137 +761,10 @@ footer {
 } 
 
 
-/* =========== */
-/* = HELPERS = */
-/* =========== */
-
-/*TYPOGRAPHY & LAYOUT
-**************************************************************/
-
-/*size*/
-.small { font-size: .75em; }
-.medium { font-size: 1.5em; }
-.large { font-size: 2em; }
-.x-large { font-size: 2.5em; }
-
-/*alignment*/
-.align-center { text-align: center; }
-.align-justify { text-align: justify; }
-.align-right { text-align: right; }
-.align-left {text-align: left; }
-
-/*styling*/
-.drop-cap {
-  font-size: 3em;
-  line-height: 1;
-  font-weight: 600;
-  padding: 2px 8px 0 0;
-  float: left; }
-.run-in { font-weight: bold;}
-.italic {font-style: italic;}
-.bold {font-weight: 700;}
-.uppercase { text-transform: uppercase; }
-.lowercase { text-transform: lowercase; }
-
-/*other*/
-.hide-text {border: 0;font: 0/0 a;text-shadow: none;color: transparent;}
-
-.smooth {-webkit-font-smoothing: antialiased;}
-.sub-smooth {-webkit-font-smoothing: subpixel-antialiased;} 
-
-.r-br {display: none;} /*responsive line break - no break on mobile*/
-
-.cols2, 
-.cols3, 
-.cols4 {
-  max-width: 780px;
-  -webkit-column-count: 1;
-  -moz-column-count: 1;
-  -ms-column-count: 1;
-  column-count: 1;} 
-
-
-
-@media screen and (min-width: 600px) {
-
-  .r-br {display: block;} /*responsive line break*/
-
-  .cols2 {
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-        -ms-column-count: 2;
-            column-count: 2;}
-  
-  .cols3 {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-        -ms-column-count: 3;
-            column-count: 3;}
-  
-  .cols4 {
-    -webkit-column-count: 4;
-       -moz-column-count: 4;
-        -ms-column-count: 4;
-            column-count: 4;} 
-
-      .cols2 p, 
-      .cols3 p, 
-      .cols4 p {
-          padding-top: 0; 
-          padding-bottom: 1em;
-          display: inline-block;
-        }          
-      
-        .cols2 h1, 
-        .cols2 h2, 
-        .cols2 h3, 
-        .cols2 h4, 
-        .cols2 h5, 
-        .cols2 h6, 
-        .cols2 img,
-        .cols3 h1, 
-        .cols3 h2, 
-        .cols3 h3, 
-        .cols3 h4, 
-        .cols3 h5, 
-        .cols3 h6, 
-        .cols3 img
-        .cols4 h1, 
-        .cols4 h2, 
-        .cols4 h3, 
-        .cols4 h4, 
-        .cols4 h5, 
-        .cols4 h6, 
-        .cols4 img {
-           -webkit-column-span: all;
-               column-span: all;
-        }
-
-} 
-
-/*DISPLAY OPTIONS
-**************************************************************/
-
-/*floats*/
-.left {float: left;}
-.right {float: right;}
-
-/*display*/
-.block {display: block;}
-.inline {display: inline;}
-
-/*position*/
-.fixed {position: fixed;}
-.absolute {position: absolute;}
-.relative {position: relative;}
-.static {position: static;} 
-
- 
-
-
 /* ================== */
 /* = RETINA & PRINT = */
-/* ================== */
+/* ================== */ 
+/*retina and print styles here*/
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {

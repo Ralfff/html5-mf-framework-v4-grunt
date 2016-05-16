@@ -5,9 +5,9 @@ Theme URI:
 Description: Customized Theme for seamless, customized Theme Development.  
 Author: Ralf Hoffmeister
 Author URI: http://ralfhoffmeister.de
-Version: 3.4 (07-2014)
+Version: 3.4.2 (05-2016)
 Created and Maintained by Ralf Hoffmeister
-Copyright 2012—2014 __Ralf Hoffmeister__ All rights reserved.
+Copyright 2012—2016 __Ralf Hoffmeister__ All rights reserved.
 */
 
 /* CSS Document */
@@ -16,13 +16,19 @@ Copyright 2012—2014 __Ralf Hoffmeister__ All rights reserved.
 @import "css/css-dev/reset.css"; 
 
 
-@import "css/css-dev/modules.css"; 
+@import "css/css-dev/plugins.css"; 
+
+
+@import "css/css-dev/helper.css"; 
 
 
 @import "css/css-dev/base-styles.css"; 
 
 
 @import "css/css-dev/structure.css"; 
+
+
+@import "css/css-dev/modules.css"; 
 
 
 @import "css/css-dev/header.css"; 
@@ -32,12 +38,6 @@ Copyright 2012—2014 __Ralf Hoffmeister__ All rights reserved.
 
 
 @import "css/css-dev/footer.css"; 
-
-
-@import "css/css-dev/plugins.css"; 
-
-
-@import "css/css-dev/helper.css"; 
 
 
 @import "css/css-dev/media.css"; 

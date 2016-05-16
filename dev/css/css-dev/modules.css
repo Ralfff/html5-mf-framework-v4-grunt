@@ -1,72 +1,7 @@
 /* ========================================================= */
 /* = ==================== MODULES ======================== = */
 /* ========================================================= */
-
-/*MISC
-**************************************************************/
-
-.circle { 
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%; 
-}
-
-/*Call to Action Button*/
-.cta,
-input[type="submit"],
-button { 
-  outline: none;
-  border: 1px solid #000; 
-  color: #fff;
-  background-color: #000; 
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  padding: .25em .5em .35em;
-  line-height: 1;
-  -webkit-transition: all .15s ease-in-out;
-     -moz-transition: all .15s ease-in-out;
-      -ms-transition: all .15s ease-in-out;
-       -o-transition: all .15s ease-in-out;
-          transition: all .15s ease-in-out;
-}
-
-  .no-touch .cta:hover,
-  .no-touch input[type="submit"]:hover,
-  .no-touch button:hover { 
-    background-color: #fff; 
-    color: #000;
-  }
-
-  .cta:active, 
-  .cta.active,
-  input[type="submit"]:active,
-  button:active, 
-  /*.no-touch due to :hover state (specificity)*/
-  .no-touch .cta:active, 
-  .no-touch .cta.active,
-  .no-touch input[type="submit"]:active,
-  .no-touch button:active { 
-    background-color: #000; 
-    color: #fff;
-    -webkit-transition: none;
-       -moz-transition: none;
-        -ms-transition: none;
-         -o-transition: none;
-            transition: none;
-  } 
-
-  .warning-msg {
-    border-left: 5px solid #f00; 
-    padding-left: 10px;
-  } 
-
-  .info-msg {
-    border-left: 5px solid #aaa; 
-    padding-left: 10px;
-  }
-
-  .okay-msg {
-    border-left: 5px solid #0f0; 
-    padding-left: 10px;
-  }
+/*
+specific Layout-Modules and Components. keep it light, specifics and variations will be defined in content.css
+(Class-Name System: .moduleName-componentName-state)
+*/ 
