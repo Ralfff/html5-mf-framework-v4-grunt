@@ -58,7 +58,7 @@
   position: relative;
   min-height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
   
   .content {
@@ -68,19 +68,19 @@
     .frame, 
     [class*=frame-] { /*frame, contains Content-Modules, no padding!*/
       position: relative;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
     } 
 
       .module, 
       [class*=module-] { /*module, lives inside .frame, contains  */
-        padding: 25px;
+        padding: 0 10px;
       } 
 
 
         .page-pad, 
         .page-padding { /* adds l/r padding to element */
-          padding: 25px;
+          padding: 10px;
         } 
 
 
