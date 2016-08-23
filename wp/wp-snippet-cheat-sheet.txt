@@ -4,3 +4,4 @@
 - ACF repeater Loop		(Tab-trigger: acfrepeater) 
 - ACF image Field		(Tab-trigger: acfimg)
 - ACF Gallery Loop		(Tab-trigger: acfgallery)
+- ACF Flex Field		(Tab-trigger: acfflex)

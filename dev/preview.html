@@ -81,7 +81,7 @@
 						<div class="frame">
 							<p class="info"><strong>NOTICE</strong> color-tiles grab values from the color classes <code>.main-bg</code>, <code>.secondary-bg</code>, <code>.tertiary-bg</code> &amp; <code>.accent-bg</code> defined in the <code>style.css</code> file.</p>
 						</div>
-						<div class="frame-color">
+						<div class="frame-color clear">
 							<div class="color-tile quarter module">
 								<div class="color-area base-bg"></div>
 								<div class="tints clear">
@@ -238,41 +238,37 @@
 					</section>
 					<h3 class="preview-sub-h accent-color">Content Elements</h3>
 					<section class="clear">
-						<div class="half">
-							<p>Paragraph</p>
-							<p><a href="#">hyperlink</a></p> 
-							<p><strong>strong</strong></p>
-							<p><em>italic/emphasis</em></p>
-							<code>code</code>
-							<address>address</address>
-							<pre>pre</pre> 
-						</div><!-- END HALF -->
-						<div class="half">
-							<p><strong>Unordered List</strong></p>
-							<ul>
-								<li>List Item</li>
-								<li>List Item</li>
-								<li>List Item</li>
-							</ul>
-							<p><strong>Ordered List</strong></p>
-							<ol>
-								<li>List Item</li>
-								<li>List Item</li>
-								<li>List Item</li>
-							</ol>
-						</div><!-- END HALF -->
+						<div class="frame clear">
+							<div class="half module">
+								<p>Paragraph</p>
+								<p><a href="#">hyperlink</a></p> 
+								<p><strong>strong</strong></p>
+								<p><em>italic/emphasis</em></p>
+								<code>code</code>
+								<address>address</address>
+								<pre>pre</pre> 
+							</div><!-- END HALF -->
+							<div class="half module">
+								<p><strong>Unordered List</strong></p>
+								<ul>
+									<li>List Item</li>
+									<li>List Item</li>
+									<li>List Item</li>
+								</ul>
+								<p><strong>Ordered List</strong></p>
+								<ol>
+									<li>List Item</li>
+									<li>List Item</li>
+									<li>List Item</li>
+								</ol>
+							</div><!-- END HALF -->
+						</div>
 					</section>
 					<section class="clear">
 						<div class="frame clear">
 							<blockquote>This is a Blockquote! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, odit molestiae amet quas officia quo quidem natus ducimus laborum obcaecati ipsam sed mollitia cumque explicabo sit repellat unde reprehenderit itaque. <span class="bq-ref">- Somebody</span></blockquote>
 						</div>
 					</section>
-					<h3 class="preview-sub-h accent-color">Weights</h3>
-					<section class="clear"> 
-						<div class="frame clear">
-							<p class="info"><strong>NOTICE </strong>It depends on the font how many weights are available. If not, it falls back to the closest available weight. </p>
-						</div>
-					</section> 
 					<h3 class="preview-sub-h accent-color">Sizes</h3>
 					<section class="clear"> 
 						<div class="frame">
@@ -334,67 +330,67 @@
 					<div class="anchor" id="grid"></div>
 					<h2 class="preview-h">Grid</h2>
 					<div class="frame">
-						<p class="info"><strong>NOTICE</strong> Each grid-row is wrapped iside a <code>section</code> with a class of <code>.clear</code>. The grid element (e.g. <code>.half</code>) has no padding, so we put a <code>.frame</code> inside, which defines our global padding.</p>
+						<p class="info"><strong>NOTICE</strong> Each grid-row is wrapped iside a <code>section</code>. Inside is a <code>.frame</code>-Element which is centered and has a max-width (this represents the content-area). The grid element (e.g. <code>.half</code>) has no padding, so we put a <code>.module</code>-class, which defines our global padding. Everything uses <code>box-sizing: border-box; </code></p>
 					</div>
 					</section>
 					<section class="clear">
 						<h3 class="preview-sub-h accent-color">.half + .half</h3>
-						<div class="half clear"> 
+						<div class="module half clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ducimus numquam perspiciatis sed aliquid laborum ut maxime et dolore impedit sit repellendus at vero repellat labore natus magni architecto rerum!</p>
 						</div> <!-- END HALF --> 
 						
-						<div class="half clear"> 
+						<div class="module half clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, eius, qui fugit quos molestias dolor perspiciatis labore dolore esse consequuntur alias atque optio odit deserunt vero. Aperiam, maiores inventore provident!</p>
 						</div> <!-- END HALF -->
 					</section>
 					<section class="clear">
 						<h3 class="preview-sub-h accent-color">.third + .third +.third</h3>
-						<div class="third clear"> 
+						<div class="module third clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ducimus numquam perspiciatis sed!</p>
 						</div> <!-- END THIRD --> 
 						
-						<div class="third clear"> 
+						<div class="module third clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ducimus numquam perspiciatis sed!</p>
 						</div> <!-- END THIRD -->
 
-						<div class="third clear"> 
+						<div class="module third clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ducimus numquam perspiciatis sed!</p>
 						</div> <!-- END THIRD -->
 					</section>
 					<section class="clear">
 						<h3 class="preview-sub-h accent-color">.third + .third.double</h3>
-						<div class="third clear"> 
+						<div class="module third clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ducimus numquam perspiciatis sed aliquid laborum ut maxime et dolore impedit sit repellendus at vero repellat labore natus magni architecto rerum!</p>
 						</div> <!-- END THIRD --> 
 						
-						<div class="third double clear"> 
+						<div class="module third double clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, eius, qui fugit quos molestias dolor perspiciatis labore dolore esse consequuntur alias atque optio odit deserunt vero. Aperiam, maiores inventore provident! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nihil, neque magni delectus unde rem fugiat quaerat possimus consequuntur aliquam. Laboriosam, ducimus, sit dolorem corporis reprehenderit voluptatem nihil alias eos.</p>
 						</div> <!-- END THIRD-DOUBLE -->
 					</section>
 					<section class="clear">
 						<h3 class="preview-sub-h accent-color">.quarter + .quarter +.quarter + .quarter</h3>
-						<div class="quarter clear"> 
+						<div class="module quarter clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ducimus numquam perspiciatis sed aliquid laborum ut maxime!</p>
 						</div> <!-- END QUARTER --> 
 						
-						<div class="quarter clear"> 
+						<div class="module quarter clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ducimus numquam perspiciatis sed aliquid laborum ut maxime!</p>
 						</div> <!-- END QUARTER -->
 
-						<div class="quarter clear"> 
+						<div class="module quarter clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ducimus numquam perspiciatis sed aliquid laborum ut maxime!</p>
 						</div> <!-- END QUARTER -->
-						<div class="quarter clear"> 
+						<div class="module quarter clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ducimus numquam perspiciatis sed aliquid laborum ut maxime!</p>
 						</div> <!-- END QUARTER -->
 					</section>
 					<section class="clear">
 						<h3 class="preview-sub-h accent-color">.quarter + .quarter.triple</h3>
-						<div class="quarter clear"> 
+						<div class="module quarter clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, ducimus numquam perspiciatis sed!</p>
 						</div> <!-- END QUARTER --> 
 						
-						<div class="quarter triple clear"> 
+						<div class="module quarter triple clear"> 
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, eius, qui fugit quos molestias dolor perspiciatis labore dolore esse consequuntur alias atque optio odit deserunt vero. Aperiam, maiores inventore provident! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, sed, ullam, dolore quis magni nisi nulla perferendis nemo sit suscipit nostrum a laborum voluptatem officia nihil eius minima animi veritatis.</p>
 						</div> <!-- END QUARTER -->
 					</section>

@@ -12,14 +12,12 @@
 }
 
 /*Call to Action Button*/
-.cta,
-input[type="submit"],
-button { 
+.cta { 
+  display: inline-block;
   outline: none;
   border: 1px solid #000; 
   color: #fff;
   background-color: #000; 
-  display: inline-block;
   text-align: center;
   text-decoration: none;
   padding: .25em .5em .35em;
@@ -31,22 +29,13 @@ button {
           transition: all .15s ease-in-out;
 }
 
-  .no-touch .cta:hover,
-  .no-touch input[type="submit"]:hover,
-  .no-touch button:hover { 
+  .cta:hover { 
     background-color: #fff; 
     color: #000;
   }
 
   .cta:active, 
-  .cta.active,
-  input[type="submit"]:active,
-  button:active, 
-  /*.no-touch due to :hover state (specificity)*/
-  .no-touch .cta:active, 
-  .no-touch .cta.active,
-  .no-touch input[type="submit"]:active,
-  .no-touch button:active { 
+  .cta.active { 
     background-color: #000; 
     color: #fff;
     -webkit-transition: none;

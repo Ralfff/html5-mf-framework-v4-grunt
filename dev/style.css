@@ -58,14 +58,12 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}tabl
 }
 
 /*Call to Action Button*/
-.cta,
-input[type="submit"],
-button { 
+.cta { 
+  display: inline-block;
   outline: none;
   border: 1px solid #000; 
   color: #fff;
   background-color: #000; 
-  display: inline-block;
   text-align: center;
   text-decoration: none;
   padding: .25em .5em .35em;
@@ -77,22 +75,13 @@ button {
           transition: all .15s ease-in-out;
 }
 
-  .no-touch .cta:hover,
-  .no-touch input[type="submit"]:hover,
-  .no-touch button:hover { 
+  .cta:hover { 
     background-color: #fff; 
     color: #000;
   }
 
   .cta:active, 
-  .cta.active,
-  input[type="submit"]:active,
-  button:active, 
-  /*.no-touch due to :hover state (specificity)*/
-  .no-touch .cta:active, 
-  .no-touch .cta.active,
-  .no-touch input[type="submit"]:active,
-  .no-touch button:active { 
+  .cta.active { 
     background-color: #000; 
     color: #fff;
     -webkit-transition: none;
@@ -280,36 +269,34 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1em 0 .25em 0;
 }
 
-h1, h2 {
-  line-height: 1;
-}
-
-h3, h4, h5, h6 {
-  line-height: 1.2;
-}
-
 h1 {
   font-size: 38px;
+  line-height: 1;
 }
 
 h2 {
   font-size: 34px;
+  line-height: 1;
 }
 
 h3 {
   font-size: 30px;
+  line-height: 1.2;
 }
 
 h4 {
   font-size: 26px;
+  line-height: 1.2;
 }
 
 h5 {
   font-size: 22px;
+  line-height: 1.5;
 }
 
 h6 {
   font-size: 18px;
+  line-height: 1.5;
 }
 
 a {
@@ -317,26 +304,27 @@ a {
     outline: 0;
     color: inherit;
 }
-  .no-touch a:hover, 
+  a:hover { 
+    
+  }
   a:focus { 
     
   }
-
   a:active {
 
   }
 
-  button {
-    cursor: pointer;
+button {
+  cursor: pointer;
+}
+  button:hover {
+    background-color: #aaa;
   }
-
-  .no-touch button:hover, 
   button:focus {
-    background: #aaa;
+    background-color: #aaa;
   }
-
   button:active {
-      background: #000;
+      background-color: #000;
       color: #fff; 
   }
 
@@ -350,7 +338,7 @@ strong {
 
 code {
   font-family: courier, monospace;
-  background: #eee;
+  background-color: #eee;
   padding: 0 5px;
 }
 
@@ -372,7 +360,7 @@ ol {
 }
 
 li {
-   list-style-position:inside;
+   list-style-position:inside; 
 }
 
 nav li {
@@ -430,15 +418,10 @@ textarea {
   cursor: pointer;
   width: 100%;
   border: 1px solid #000;
-  background: #eee;
+  background-color: #eee;
   padding: 5px 10px;
   margin-bottom: 20px;
 } 
-
-input[type="submit"] {
-  
-}
-
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="tel"]:focus,
@@ -446,23 +429,63 @@ input[type="submit"] {
 
   } 
 
-  input:focus::-webkit-input-placeholder, 
-  input:focus:-moz-placeholder,  
-  input:focus::-moz-placeholder,   
-  input:focus:-ms-input-placeholder { 
-    color:transparent; 
-  } 
-  
-  textarea:focus::-webkit-input-placeholder, 
-  textarea:focus:-moz-placeholder,  
-  textarea:focus::-moz-placeholder,    
-  textarea:focus:-ms-input-placeholder { 
-    color:transparent; 
+/*
+  ::-webkit-input-placeholder, 
+  :-moz-placeholder,  
+  ::-moz-placeholder,   
+  :-ms-input-placeholder { 
+
+  }
+
+  input::-webkit-input-placeholder { 
+    color: #fff; 
   } 
 
-/*  ::-webkit-selection { background: #aaa; color: #fff; }
-     ::-moz-selection { background: #aaa; color: #fff; }
-          ::selection { background: #aaa; color: #fff; }
+  input:-moz-placeholder { 
+    color: #fff; 
+  } 
+
+  input::-moz-placeholder { 
+    color: #fff; 
+  } 
+  
+  input:-ms-input-placeholder { 
+    color: #fff; 
+  } 
+*/
+
+    input:focus::-webkit-input-placeholder, 
+    input:focus:-moz-placeholder,  
+    input:focus::-moz-placeholder,   
+    input:focus:-ms-input-placeholder, 
+    textarea:focus::-webkit-input-placeholder, 
+    textarea:focus:-moz-placeholder,  
+    textarea:focus::-moz-placeholder,    
+    textarea:focus:-ms-input-placeholder { 
+      color:transparent; 
+    } 
+
+
+input[type="submit"], 
+button {
+  /*-webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
+}
+  input[type="submit"]:hover, 
+  button:hover {
+    
+  }
+  input[type="submit"]:active, 
+  button:active {
+    
+  }
+  input[type="submit"]:focus, 
+  button:focus {
+    
+  }
+  
+/*  ::-webkit-selection { background-color: #aaa; color: #fff; }
+     ::-moz-selection { background-color: #aaa; color: #fff; }
+          ::selection { background-color: #aaa; color: #fff; }
 
          h1::-webkit-selection { color: #222; }
             h1::-moz-selection { color: #222; }
@@ -595,7 +618,8 @@ input[type="submit"] {
   
     .frame, 
     [class*=frame-] { /*frame, contains Content-Modules, no padding!*/
-      position: relative;
+      position: relative; 
+      width: 100%;
       max-width: 1200px;
       margin: 0 auto;
     } 
@@ -704,7 +728,6 @@ header {
         color: #000;
         text-decoration: none;
       }
-
 
 /*Toggle Nav Button (mobile)*/
 .menu-button {

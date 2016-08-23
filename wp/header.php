@@ -5,6 +5,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<meta name="MobileOptimized" content="320">
 	<meta name="HandheldFriendly" content="True">
+	<!-- <meta name="theme-color" content="#000000"> -->
 	
 	<?php if (is_search()) { ?>
 	   <meta name="robots" content="noindex, nofollow" /> 

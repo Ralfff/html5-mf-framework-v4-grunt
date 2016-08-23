@@ -6,6 +6,13 @@ header {
 	opacity: .95;
 } 
 
+.main-nav {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important; 
+	height: auto !important; 
+	min-height: 0 !important;
+}
+
 .main-nav li {
 	float: left;
 }
@@ -44,11 +51,17 @@ header {
     padding: 25px 25px 15px; 
   } 
 
+ .frame-color {
+ 	max-width: 1000px; 
+	margin: 0 auto;
+ }
+
  .color-area  {
 	height: 150px; 
 	-webkit-border-radius: 15px 15px 0 0;
 	-moz-border-radius: 15px 15px 0 0;
-	border-radius: 15px 15px 0 0;
+	border-radius: 15px 15px 0 0; 
+	border: 1px solid #fff; 
  } 
 
  .color-title { 
@@ -57,9 +70,18 @@ header {
  	border-top: 1px solid;
  } 
 
+ .tints {
+ 	background-color: #fff;
+ }
+
  .tints .quarter {
 	height: 50px; 
-	padding: 0;
+	padding: 0; 
+	border-left: 1px solid #fff;
+ } 
+
+  .tints .quarter:last-child { 
+	border-right: 1px solid #fff;
  } 
 
  .border-bottom {
