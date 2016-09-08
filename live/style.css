@@ -508,12 +508,12 @@ header {
   right: 0;
   width: 50px;
   height: 50px; 
-  background: transparent url('images/interface/open-menu-bg.png') center center no-repeat; 
+  background: transparent url('images/ui/open-menu-bg.png') center center no-repeat; 
   background-size: 20px;
 } 
 
 .nav-open .menu-button {
-  background: url('images/interface/close-menu-bg.png') center center no-repeat; 
+  background: url('images/ui/close-menu-bg.png') center center no-repeat; 
   background-size: 20px;
 } 
 

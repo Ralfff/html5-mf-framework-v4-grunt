@@ -14,11 +14,11 @@ module.exports = function(grunt) {
         dest: 'dev/js/custom.min.js' // output
       },
       all: {
-        src: ['dev/js/modernizr.custom.js','dev/js/jquery.js','dev/js/plugins/*.js','dev/js/custom.js'], // input
+        src: ['dev/js/modernizr-custom.js','dev/js/jquery.js','dev/js/plugins/*.js','dev/js/custom.js'], // input
         dest: 'dev/js/scripts.min.js' // output
       },
       deploy: {
-        src: ['dev/js/modernizr.custom.js','dev/js/jquery.js','dev/js/plugins/*.js'], // input
+        src: ['dev/js/modernizr-custom.js','dev/js/jquery.js','dev/js/plugins/*.js'], // input
         dest: 'dev/js/scripts.min.js' // output
       },
       wp: {
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 
     watch: {
       scripts: {
-        files: ['dev/js/modernizr.custom.js','dev/js/jquery.js','dev/js/plugins/*.js'],
+        files: ['dev/js/modernizr-custom.js','dev/js/jquery.js','dev/js/plugins/*.js'],
         tasks: ['uglify:deploy'],
         options: {
           spawn: false,
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
               'style.css',
               'style.min.css',
               'preview-styles.css',
-              'js/modernizr.custom.js',
+              'js/modernizr-custom.js',
               'js/scripts.min.js',
               'js/custom.js',
               'images/**',
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
             cwd: 'dev/',
             src: [
               'style.css',
-              'js/modernizr.custom.js',
+              'js/modernizr-custom.js',
               'js/jquery.js',
               'js/scripts.min.js',
               'js/custom.js',
