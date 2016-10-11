@@ -62,7 +62,12 @@
     include_once('functions-custom/hide-wp-version.php');
 
   //Page Slug Body Class
-    include_once('functions-custom/page-name-class.php');
-          
+    include_once('functions-custom/page-name-class.php'); 
+
+  //Category Body Class
+    include_once('functions-custom/category-name-class.php'); 
+    
+  //Browser Name Body Class
+    include_once('functions-custom/browser-name-class.php');           
 
 ?>
