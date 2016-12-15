@@ -1,7 +1,33 @@
-- CUSTOM POST TYPES 	(Tab-trigger: cp+tab) 
-- CUSTOM TAXONOMY 		(Tab-trigger: ct+tab) 
-- WP IMAGE PATH 		(Tab-trigger: wpimg+tab) 
+/*
+Sublime-Snippets (Tab-Trigger)
+*/
+
+- Custom post type  	(Tab-trigger: cp+tab) 
+- Custom Taxonomy 		(Tab-trigger: ct+tab) 
+- WP img path 			(Tab-trigger: wpimg+tab) 
+- Template Part 		(Tab-trigger: part+tab) 
 - ACF repeater Loop		(Tab-trigger: acfrepeater) 
 - ACF image Field		(Tab-trigger: acfimg)
 - ACF Gallery Loop		(Tab-trigger: acfgallery)
-- ACF Flex Field		(Tab-trigger: acfflex)
+- ACF Flex loop 		(Tab-trigger: acfflex)
+
+
+/*
+WP-Snippets
+*/
+
+//Template-Verzeichnis
+<?php echo get_bloginfo('template_directory'); ?>
+
+//Template Part 
+<?php get_template_part('parts/footer', 'contact'); ?>
+
+//Seitenadresse
+<?php echo home_url(); ?> 
+
+//Installations-Pfad
+<?php echo site_url(); ?>
+
+//Change WP URL (site url = install-path server, home = frontend-path web)
+update_option( 'siteurl', 'http://example.com' );
+update_option( 'home', 'http://example.com' );
