@@ -38,10 +38,9 @@
 		<header>
 			<div class="frame clear">
 				<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" class="logo clear"></a>
-				<nav class="main-nav clear">
-					<?php wp_nav_menu( array('theme_location' => 'main-nav' )); ?>
-				</nav>
-	
+					<!-- Main Nav -->
+					<?php wp_nav_menu( array('theme_location' => 'main-nav', 'container_class' => 'main-nav clear', 'menu_class' => 'main-nav clear', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>' )); ?>
+
 				<button type="button" class="menu-button" href="#"></button> 
 			</div> <!--END FRAME-->
 		</header><!-- END HEADER -->

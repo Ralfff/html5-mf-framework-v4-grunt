@@ -22,6 +22,13 @@
   // Declare sidebar widget zone
     include_once('functions-custom/sidebar-widget-zone.php');
 
+  //ACF INCLUDE IN SEARCH 
+    include_once('functions-custom/acf-include-in-search.php'); 
+
+  //ACF EXCERPT  
+    // include_once('functions-custom/acf-excerpt.php'); 
+  
+
   //CUSTOM MENUS 
     include_once('functions-custom/menus.php');
 

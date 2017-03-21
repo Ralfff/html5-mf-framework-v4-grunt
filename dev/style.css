@@ -236,11 +236,12 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}tabl
 /* ========================================================= */ 
 /*Basic Styling for Headlines, Forms, links etc. */
 
- html {
+ html { 
   min-height: 100%;
   font-size: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
 }
 
 body {
