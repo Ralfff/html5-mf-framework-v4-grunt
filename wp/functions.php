@@ -1,5 +1,9 @@
 <?php 
 
+  //Change WP URL (site url = install-path server, home = frontend-path web)
+  // update_option( 'siteurl', 'http://example.com' );
+  // update_option( 'home', 'http://example.com' ); 
+
   //IMPORTS 
   include_once('functions-custom/custom_post_types.php'); 
 
@@ -11,7 +15,10 @@
     //add_theme_support( 'automatic-feed-links' );
   
   // CUSTOM WORDPRESS LOGIN CSS
-    include_once('functions-custom/login.php');
+    // include_once('functions-custom/login.php');
+
+  // Editor Formate definieren
+    // include_once('functions-custom/formate.php');
   
   //REGISTER SCRIPTS 
     include_once('functions-custom/register-scripts.php');
@@ -23,7 +30,7 @@
     include_once('functions-custom/sidebar-widget-zone.php');
 
   //ACF INCLUDE IN SEARCH 
-    include_once('functions-custom/acf-include-in-search.php'); 
+    // include_once('functions-custom/acf-include-in-search.php'); 
 
   //ACF EXCERPT  
     // include_once('functions-custom/acf-excerpt.php'); 
@@ -72,7 +79,7 @@
     include_once('functions-custom/page-name-class.php'); 
 
   //Category Body Class
-    include_once('functions-custom/category-name-class.php'); 
+    // include_once('functions-custom/category-name-class.php'); 
     
   //Browser Name Body Class
     include_once('functions-custom/browser-name-class.php');           

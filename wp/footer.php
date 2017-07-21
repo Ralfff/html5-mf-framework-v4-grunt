@@ -2,9 +2,7 @@
 			<div class="frame">
 					&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?> 
 
-					<nav class="footer-nav clear">
-						<?php wp_nav_menu( array('theme_location' => 'footer-nav' )); ?>
-					</nav>
+					<?php wp_nav_menu( array('theme_location' => 'footer-nav', 'container' => 'nav', 'container_class' => 'footer-nav clear', 'menu_class' => 'footer-nav clear', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>' )); ?>
 
 			</div> <!--END FRAME-->
 		</footer> <!--END FOOTER-->
@@ -14,7 +12,7 @@
 
 	<?php wp_footer(); ?>
 	
-	<!-- Don't forget analytics -->
+	<!-- Scripts go here -->
 	
 </body>
 
