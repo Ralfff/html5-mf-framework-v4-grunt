@@ -18,7 +18,7 @@ Custom Script
 		function mobile() {
 			//Nav-Button 
 			$menuLink.on('click', function(e) {
-				$body.toggleClass('nav-open');
+				$body.toggleClass('nav_is_open');
 				e.preventDefault();
 			});
 			}
@@ -67,7 +67,7 @@ Custom Script
 		//Debounce resizing Interval 
 		$( window ).resize( debouncer( function ( e ) {
 			if($(this).innerWidth()  >= $screenSize) {
-				$body.removeClass('nav-open');
+				$body.removeClass('nav_is_open');
 			}
 		}, 200)
 		);

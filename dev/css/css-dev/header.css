@@ -25,7 +25,7 @@ header {
           transition: all .25s ease-in-out;
 } 
 
-.js .nav-open .main-nav { 
+.js .nav_is_open .main-nav { 
   max-height: 1000px; 
 }
 
@@ -58,13 +58,13 @@ header {
     width: 50px;
     height: 50px; 
     border: none;
-    background: transparent url('images/ui/open-menu-bg.png') center center no-repeat; 
-    background-size: 20px;
+    background: transparent url('images/ui/open-icon-black.svg') center center no-repeat; 
+    background-size: 24px;
   } 
   
-    .nav-open .menu-button, 
-    .nav-open .menu-button:hover {
-      background: url('images/ui/close-menu-bg.png') center center no-repeat; 
+    .nav_is_open .menu-button, 
+    .nav_is_open .menu-button:hover {
+      background: url('images/ui/close-icon-black.svg') center center no-repeat; 
       background-size: 20px;
     } 
 
