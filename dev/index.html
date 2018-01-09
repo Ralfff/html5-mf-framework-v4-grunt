@@ -2,97 +2,123 @@
 
 <html lang="de" class="no-js">
 
-<head> 
+<head>
 
-<meta charset="UTF-8" /> 
-<meta name="author" content="" />
-<meta name="description" content="" />
-<meta name="MobileOptimized" content="320">
-<meta name="HandheldFriendly" content="True">
-<!-- <meta name="theme-color" content="#000000"> -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <!-- <meta name="theme-color" content="#000000"> -->
 
-<!-- stops auto-scale, allows user scale -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- stops auto-scale, allows user scale -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="style.css" media="all" /> 
+    <link rel="stylesheet" href="style.css" media="all" />
 
-<!-- iOS icons -->
-<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144-precomposed.png"> -->
-<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/apple-touch-icon-114x114-precomposed.png"> -->
-<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72x72-precomposed.png"> -->
-<!-- <link rel="apple-touch-icon-precomposed" href="images/icons/apple-touch-icon-57x57-precomposed.png"> -->
+    <!-- iOS icons -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144-precomposed.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/apple-touch-icon-114x114-precomposed.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72x72-precomposed.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" href="images/icons/apple-touch-icon-57x57-precomposed.png"> -->
 
-<!-- Tile icon for Win8 (144x144 + tile color) -->
-<!-- <meta name="msapplication-TileImage" content="images/icons/ms-touch-icon-144x144-precomposed.png"> -->
-<!-- <meta name="msapplication-TileColor" content="#fff"> --> 
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <!-- <meta name="msapplication-TileImage" content="images/icons/ms-touch-icon-144x144-precomposed.png"> -->
+    <!-- <meta name="msapplication-TileColor" content="#fff"> -->
 
-<!-- Chrome Add to Homescreen -->
-<!-- <link rel="shortcut icon" sizes="196x196" href="images/icons/touch-icon-196x196.png"> -->
+    <!-- Chrome Add to Homescreen -->
+    <!-- <link rel="shortcut icon" sizes="196x196" href="images/icons/touch-icon-196x196.png"> -->
 
-<!-- Generic Icon -->
-<link rel="shortcut icon" href="images/icons/touch-icon-57x57.png">
+    <!-- Generic Icon -->
+    <link rel="shortcut icon" href="images/icons/touch-icon-57x57.png">
 
-<script src="js/modernizr-custom.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/scripts.min.js" type="text/javascript" charset="utf-8"></script> 
-<script src="js/custom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/modernizr-custom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/custom.js" type="text/javascript" charset="utf-8"></script>
 
-<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<!--IE png support-->
-<!--[if lt IE 7]>
+    <!--IE png support-->
+    <!--[if lt IE 7]>
 <script defer src="js/plugins/pngfix.js"></script>
 <![endif]-->
 
 
-<title></title>
+    <title>index</title>
 
 </head>
 
 
-<body class=""> 
-	<div class="container"> 
-	
-		<header>
-			<div class="frame clear">
-				
-				<a href="#" title="" class="logo clear">Logo-img</a> 
-				
-				<nav class="main-nav clear">
-					<ul class="clear">
-						<li><a href="#">eins</a></li>
-						<li><a href="#">zwei</a></li>
-						<li><a href="#">drei</a></li>
-						<li><a href="#">vier</a></li>
-					</ul>
-				</nav> 
-						
-				<button type="button" class="menu-button" href="#"></button> 
+<body class="">
+    <div class="container">
 
-			</div> <!--END FRAME-->
-		</header> <!--END HEADER-->
-	
-		<div class="content">  
-			<section>
+        <header>
+            <div class="frame clear">
 
-			</section>
-		</div> <!--END CONTENT-->
-		
-	
-		<footer>
-			<div class="frame">
+                <a href="#" title="" class="logo clear">Logo-img</a>
 
-			</div> <!--END FRAME-->
-		</footer> <!--END FOOTER-->
+                <nav class="main-nav clear">
+                    <ul class="clear">
+                        <li><a href="#">eins</a></li>
+                        <li class="current-menu-ancestor">
+                            <a href="#">zwei</a>
+                            <ul class="sub-menu">
+                                <li class="current-menu-item"><a href="#">Submenu Item 1</a></li>
+                                <li><a href="#">Second Sub-Item</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">drei</a></li>
+                        <li><a href="#">vier</a></li>
+                    </ul>
+                </nav>
 
-	
-	</div> <!--END Container--> 
+                <button type="button" class="menu-button" href="#"></button>
+
+            </div>
+            <!--END FRAME-->
+        </header>
+        <!--END HEADER-->
+
+        <div class="content">
+            <section>
+                <div class="frame module">
+                    <h2>Main Heading h2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <em>I am italic</em> fugiat odio autem enim <strong>bold!</strong> non dolorem
+                        possimus! Facilis, nulla dignissimos natus explicabo voluptas dolore excepturi eveniet animi nobis. Lorem ipsum dolor sit amet, consectetur <a href="#">this is a link</a> elit. Magni, cum, obcaecati, deleniti, eveniet
+                        unde laborum nisi maiores facere corporis earum numquam tempora doloribus voluptates rerum corrupti officiis quasi ipsam iusto.</p>
+                    <blockquote>Behold, therefore I am a blockquote. Thee shall use me wisely, e.g. for highlighting text that deserveth to stand out. Like Katie Perry quotes. <span class="bq-ref">- Nobody, ever.</span></blockquote>
+                    <p><a href="#" class="cta">Button</a></p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+                        <li>Quidem totam eius saepe, deleniti est culpa? Ducimus blanditiis eligendi optio tempora vel assumenda similique nulla error, ipsam deserunt, neque, eaque recusandae? </li>
+                        <li>Lorem ipsum dolor sit amet consectetur</li>
+                    </ul>
+
+                    <h1>Main Heading h1</h1>
+                    <h2>Main Heading h2</h2>
+                    <h3>Main Heading h3</h3>
+                    <h4>Main Heading h4</h4>
+                    <h5>Main Heading h5</h5>
+                    <h6>Main Heading h6</h6>
+                </div>
+            </section>
+        </div>
+        <!--END CONTENT-->
+
+
+        <footer>
+            <div class="frame">
+
+            </div>
+            <!--END FRAME-->
+        </footer>
+        <!--END FOOTER-->
+
+
+    </div>
+    <!--END Container-->
 </body>
 
 </html>
-
-
-
-
-

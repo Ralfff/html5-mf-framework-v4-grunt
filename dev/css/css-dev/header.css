@@ -1,42 +1,50 @@
 /* ========== */
 /* = HEADER = */
-/* ========== */ 
+/* ========== */
 /*Header stuff (Navigation, Logo etc.)*/
 
 header {
   position: relative;
   z-index: 10;
-} 
+}
 
-.logo { 
+.logo {
   display: block;
   text-decoration: none;
-} 
+}
 
 /*Main-Nav*/
-.js .main-nav { 
-  height: auto; 
-  max-height: 0px; 
-  overflow: hidden; 
+.main-nav {
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
   -webkit-transition: all .25s ease-in-out;
      -moz-transition: all .25s ease-in-out;
       -ms-transition: all .25s ease-in-out;
        -o-transition: all .25s ease-in-out;
           transition: all .25s ease-in-out;
-} 
+}
 
-.js .nav_is_open .main-nav { 
-  max-height: 1000px; 
+@media screen and (min-width: 600px) {
+  .main-nav {
+    height: auto;
+    max-height: none;
+  }
+}
+
+.nav_is_open .main-nav {
+  max-height: 1000px;
+  overflow: auto;
 }
 
   .main-nav ul {
     padding: 0;
   }
-  
+
     .main-nav li {
       list-style: none;
     }
-  
+
       .main-nav a {
         display: block;
         padding: 10px;
@@ -44,41 +52,41 @@ header {
         text-decoration: none;
       }
 
-/*Toggle Nav Button (mobile)*/
-.menu-button {
-  display: none;
-}
+        .main-nav .current-menu-ancestor a {
+          color: #f00;
+        }
 
-  .js .menu-button, 
-  .js .menu-button:hover { 
+        .main-nav .current-menu-item a {
+          color: #0f0;
+        }
+
+  .menu-button,
+  .menu-button:hover {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
     width: 50px;
-    height: 50px; 
+    height: 50px;
     border: none;
-    background: transparent url('images/ui/open-icon-black.svg') center center no-repeat; 
-    background-size: 24px;
-  } 
-  
-    .nav_is_open .menu-button, 
+    background-image: url('images/ui/open-icon-black.svg');
+    background-color:transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    outline: none;
+  }
+
+    .nav_is_open .menu-button,
     .nav_is_open .menu-button:hover {
-      background: url('images/ui/close-icon-black.svg') center center no-repeat; 
-      background-size: 20px;
-    } 
+      background-image: url('images/ui/close-icon-black.svg');
+    }
 
 @media screen and (min-width: 600px) {
 
-  .js .menu-button {
+  .menu-button {
     display: none;
-  } 
-
-  .js .main-nav { 
-    height: auto; 
-    max-height: none; 
   }
-
 
 }
 
