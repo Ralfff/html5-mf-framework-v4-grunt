@@ -32,6 +32,13 @@ WP-Snippets
 update_option( 'siteurl', 'http://example.com' );
 update_option( 'home', 'http://example.com' ); 
 
+// Use "Antispambot" to secure E-Mails from Harvesters 
+<?php $theEmail = get_field('pro_email'); ?>
+<a href="mailto:<?php echo antispambot( $theEmail ) ?>">
+Email Me
+</a>
+
+
 //Don’t show posts from the past
 <?php 
 

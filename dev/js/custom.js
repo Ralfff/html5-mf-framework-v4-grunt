@@ -1,29 +1,29 @@
-/*! 
+/*!
 Custom Script
 */
 (function($){
     $(function(){
-	
+
 		var $screenSize = 600,
 			$menuLink = $('.menu-button'),
 			$body = $('body');
 
 			mobile();
-			easeScroll();
+			// easeScroll();
 
 		//=============//
 		//= FUNCTIONS =//
-		//=============// 
+		//=============//
 
 		function mobile() {
-			//Nav-Button 
+			//Nav-Button
 			$menuLink.on('click', function(e) {
 				$body.toggleClass('nav_is_open');
 				e.preventDefault();
 			});
 			}
 
-		
+
 		function easeScroll() {
 			//Animate Scroll
 			$('a[href*=\\#]:not([href=\\#])').click(function() {
@@ -39,20 +39,9 @@ Custom Script
 				}
 			});
 
-			//Highlight Menu
-			$(window).scroll(function (event) {
-				var inview = '#' + $('section > .frame:in-viewport:first').siblings('.anchor').attr('id'),
-					$link = $('.main-nav a').filter('[href=' + inview + ']');
-				if (inview && $link.length && !$link.is('.active')) {
-					console.log(inview);
-					$('.main-nav a').removeClass('active');
-					$link.addClass('active');
-				}
-			});
-	
 		}
 
-		//Function Trigger Interval 
+		//Function Trigger Interval
 		function debouncer( func , timeout ) {
 			var timeoutID , timeout = timeout || 200;
 			return function () {
@@ -64,7 +53,7 @@ Custom Script
 			};
 		}
 
-		//Debounce resizing Interval 
+		//Debounce resizing Interval
 		$( window ).resize( debouncer( function ( e ) {
 			if($(this).innerWidth()  >= $screenSize) {
 				$body.removeClass('nav_is_open');

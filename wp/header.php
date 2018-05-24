@@ -19,7 +19,6 @@
 	<!-- Generic Icon -->
 	<?php wp_site_icon(); ?>
 
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
@@ -42,13 +41,12 @@
 					<?php wp_nav_menu( array(
 						'theme_location' => 'main-nav',
 						'container' => 'nav',
-						'container_class' =>
-						'main-nav clear',
+						'container_class' => 'main-nav clear',
 						'menu_class' => 'main-nav-ul clear',
 						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
 					)); ?>
 
-				<button type="button" class="menu-button" href="#"></button>
+				<button type="button" class="menu-button"></button>
 			</div> <!--END FRAME-->
 		</header><!-- END HEADER -->
 

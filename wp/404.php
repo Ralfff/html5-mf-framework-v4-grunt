@@ -1,7 +1,7 @@
 <?php get_header(); ?> 
 
 	<div class="content clear">  
-		<section>
+		<section class="section-error">
 			<div class="frame clear"> 
 
 					<h2 class="align-center">Error 404 - Seite nicht gefunden</h2> 

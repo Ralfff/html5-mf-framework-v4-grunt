@@ -10,6 +10,8 @@
 
     function custom_scripts() {
     if (!is_admin()) {
+
+          wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/style.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
   
           wp_register_script('modernizr', get_bloginfo('template_directory') . "/js/modernizr-custom.js");
           wp_enqueue_script( 'modernizr' );
@@ -20,6 +22,7 @@
           wp_enqueue_script( 'plugins-js' );
           wp_register_script('custom', get_bloginfo('template_directory') . "/js/custom.js"); // custom.js minified 
           wp_enqueue_script( 'custom' );
+
       }
     }
     add_action( 'wp_enqueue_scripts', 'custom_scripts' );

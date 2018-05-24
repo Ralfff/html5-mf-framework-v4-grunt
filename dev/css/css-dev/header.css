@@ -52,11 +52,11 @@ header {
         text-decoration: none;
       }
 
-        .main-nav .current-menu-ancestor a {
+        .main-nav .current-menu-ancestor > a {
           color: #f00;
         }
 
-        .main-nav .current-menu-item a {
+        .main-nav .current-menu-item > a {
           color: #0f0;
         }
 

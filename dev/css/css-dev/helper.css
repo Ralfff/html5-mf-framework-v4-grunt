@@ -119,3 +119,6 @@
 .relative {position: relative;}
 .static {position: static;}
 
+.slick-dots li:only-child {
+    display: none;
+}
