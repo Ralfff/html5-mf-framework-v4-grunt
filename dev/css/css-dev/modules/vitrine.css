@@ -1,0 +1,13 @@
+/*
+VITRINE
+*/
+
+.section-vitrine {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+}

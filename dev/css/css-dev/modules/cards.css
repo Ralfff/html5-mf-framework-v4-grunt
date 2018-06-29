@@ -1,0 +1,57 @@
+.cards {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+    .cards-two .card-item {
+        width: 50%;
+        min-width: 300px;
+    }
+
+    .cards-three .card-item {
+        width: 33.3%;
+        min-width: 300px;
+    }
+
+    .cards-four .card-item {
+        width: 25%;
+        min-width: 300px;
+    }
+
+    .cards-five .card-item {
+        width: 20%;
+        min-width: 240px;
+    }
+
+    .cards-six .card-item {
+        width: 16.66%;
+        min-width: 200px;
+    }
+
+    .cards-seven .card-item {
+        width: 14.2857142%;
+        min-width: 160px;
+    }
+
+    .cards-eight .card-item {
+        width: 12.5%;
+        min-width: 120px;
+    }
+
+
+    .card-item {
+        padding: 10px;
+    }
+
+        .card-item img {
+            display: block;
+        }
+
+        .card-text {
+            padding: 10px;
+        }

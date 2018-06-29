@@ -1,0 +1,86 @@
+form > div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family:inherit;
+  font-size: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #000;
+  background-color: transparent;
+  padding: 5px 10px;
+}
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus {
+
+  }
+
+/*
+  ::-webkit-input-placeholder,
+  :-moz-placeholder,
+  ::-moz-placeholder,
+  :-ms-input-placeholder {
+
+  }
+
+  input::-webkit-input-placeholder {
+    color: #fff;
+  }
+
+  input:-moz-placeholder {
+    color: #fff;
+  }
+
+  input::-moz-placeholder {
+    color: #fff;
+  }
+
+  input:-ms-input-placeholder {
+    color: #fff;
+  }
+*/
+
+    input:focus::-webkit-input-placeholder,
+    input:focus:-ms-input-placeholder,
+    input:focus::placeholder,
+    textarea:focus::-webkit-input-placeholder,
+    textarea:focus:-ms-input-placeholder,
+    textarea:focus::placeholder {
+      color:transparent;
+    }
+
+
+input[type="submit"],
+button {
+  /*-webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
+}
+  input[type="submit"]:hover,
+  button:hover {
+
+  }
+  input[type="submit"]:active,
+  button:active {
+
+  }
+  input[type="submit"]:focus,
+  button:focus {
+
+  }

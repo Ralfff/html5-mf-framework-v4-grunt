@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         preserveComments: 'some',
       },
       build: {
-        src: 'dev/js/custom.js', // input 
+        src: 'dev/js/custom.js', // input
         dest: 'dev/js/custom.min.js' // output
       },
       all: {
@@ -54,9 +54,9 @@ module.exports = function(grunt) {
           spawn: false,
         }
       },
-      
+
       css: {
-        files: ['dev/style.css','dev/css/css-dev/*'],
+        files: ['dev/style.css','dev/css/css-dev/*','dev/css/css-dev/modules/*'],
         tasks: ['cssmin'],
         options: {
           livereload: true,
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
       },
 
       join: {
-        files: ['dev/css/css-dev/*'],
+        files: ['dev/css/css-dev/*','dev/css/css-dev/modules/*'],
         tasks: ['cssjoin'],
         options: {
           livereload: true,

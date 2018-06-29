@@ -15,31 +15,58 @@ header {
 
 /*Main-Nav*/
 .main-nav {
-  height: auto;
-  max-height: 0px;
+  height: 0;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
   overflow: hidden;
-  -webkit-transition: all .25s ease-in-out;
-     -moz-transition: all .25s ease-in-out;
-      -ms-transition: all .25s ease-in-out;
-       -o-transition: all .25s ease-in-out;
-          transition: all .25s ease-in-out;
+  background-color: #fff;
+  -webkit-transition: opacity .25s ease-in-out;
+     -moz-transition: opacity .25s ease-in-out;
+      -ms-transition: opacity .25s ease-in-out;
+       -o-transition: opacity .25s ease-in-out;
+          transition: opacity .25s ease-in-out;
+}
+
+.nav_is_open .main-nav {
+  position: fixed;
+  visibility: visible;
+  height: 100vh;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
 }
 
 @media screen and (min-width: 600px) {
   .main-nav {
     height: auto;
     max-height: none;
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
   }
 }
 
-.nav_is_open .main-nav {
-  max-height: 1000px;
-  overflow: auto;
-}
 
-  .main-nav ul {
+
+  .main-nav > ul {
     padding: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
+
+@media screen and (min-width: 600px) {
+  .main-nav > ul {
+    padding: 0;
+    position: relative;
+    top: auto;
+    transform: none;
+  }
+}
 
     .main-nav li {
       list-style: none;
@@ -47,6 +74,7 @@ header {
 
       .main-nav a {
         display: block;
+        text-align: center;
         padding: 10px;
         color: #000;
         text-decoration: none;
@@ -62,6 +90,7 @@ header {
 
   .menu-button,
   .menu-button:hover {
+    z-index: 10;
     display: block;
     position: absolute;
     top: 0;
@@ -69,17 +98,22 @@ header {
     width: 50px;
     height: 50px;
     border: none;
-    background-image: url('images/ui/open-icon-black.svg');
+    background-image: url('images/ui/nav-black.svg');
     background-color:transparent;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 24px 16px;
     outline: none;
+  }
+
+  .menu-button:focus {
+    background-color: transparent;
   }
 
     .nav_is_open .menu-button,
     .nav_is_open .menu-button:hover {
-      background-image: url('images/ui/close-icon-black.svg');
+      background-image: url('images/ui/close-black.svg');
+      background-size: 20px 20px;
     }
 
 @media screen and (min-width: 600px) {

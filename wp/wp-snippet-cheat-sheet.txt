@@ -84,3 +84,16 @@ $today = date('Ymd');
 	wp_reset_postdata();
 	
  ?>
+
+//Change Host IP (temporär zum testen)
+Macintosh HD/private/etc/hosts
+Datei öffnen und dann IP Adresse dann Leerzeichen dann url ohne http://
+Bsp: 
+87.128.227.164 schleunung.com
+
+//Force SSL (Direkt nach RewriteEngine On einfügen): 
+
+//RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+

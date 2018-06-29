@@ -1,4 +1,8 @@
 /* =========== */
 /* = CONTENT = */
-/* =========== */ 
+/* =========== */
 /*Content Styling for Page Templates, e.g. variations from the module section*/
+
+.page-modules section {
+    margin-bottom: 150px;
+}

@@ -19,12 +19,11 @@ body {
   position: relative;
   min-height: 100%;
   font-family: Verdana, sans-serif;
-  font-size: 100%;
+  font-size: 16px;
   line-height: 1.4;
 }
 
 p {
-  max-width: 38em;
   padding: 0.5em 0 0.5em 0;
   -epub-word-break: hyphenate;
     -ms-word-break: hyphenate;
@@ -36,9 +35,6 @@ p {
           hyphens: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  padding: 1em 0 .25em 0;
-}
 
 h1 {
   font-size: 20px;
@@ -170,6 +166,33 @@ ol {
   list-style: decimal;
 }
 
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+
 li {
    list-style-position:inside;
 }
@@ -181,6 +204,11 @@ nav li {
 .content li {
   padding-left: 1.28571429em;
   text-indent: -1.28571429em;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
 }
 
 img {
@@ -217,86 +245,7 @@ blockquote {
     text-align: right;
   }
 
-input,
-select,
-textarea,
-button{
-  font-family:inherit;
-  font-size: inherit;
-}
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  display: block;
-  cursor: pointer;
-  width: 100%;
-  border: 1px solid #000;
-  background-color: #eee;
-  padding: 5px 10px;
-  margin-bottom: 20px;
-}
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="tel"]:focus,
-  textarea:focus {
-
-  }
-
-/*
-  ::-webkit-input-placeholder,
-  :-moz-placeholder,
-  ::-moz-placeholder,
-  :-ms-input-placeholder {
-
-  }
-
-  input::-webkit-input-placeholder {
-    color: #fff;
-  }
-
-  input:-moz-placeholder {
-    color: #fff;
-  }
-
-  input::-moz-placeholder {
-    color: #fff;
-  }
-
-  input:-ms-input-placeholder {
-    color: #fff;
-  }
-*/
-
-
-
-    input:focus::-webkit-input-placeholder,
-    input:focus:-ms-input-placeholder,
-    input:focus::placeholder,
-    textarea:focus::-webkit-input-placeholder,
-    textarea:focus:-ms-input-placeholder,
-    textarea:focus::placeholder {
-      color:transparent;
-    }
-
-
-input[type="submit"],
-button {
-  /*-webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
-}
-  input[type="submit"]:hover,
-  button:hover {
-
-  }
-  input[type="submit"]:active,
-  button:active {
-
-  }
-  input[type="submit"]:focus,
-  button:focus {
-
-  }
 
 /*  ::-webkit-selection { background-color: #aaa; color: #fff; }
      ::-moz-selection { background-color: #aaa; color: #fff; }

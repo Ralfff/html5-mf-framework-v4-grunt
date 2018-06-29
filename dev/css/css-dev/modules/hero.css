@@ -1,0 +1,21 @@
+/*
+HERO
+*/
+.section-hero {
+    position: relative;
+}
+
+.section-hero img {
+    width: 100%;
+    max-width: none;
+    display: block;
+}
+
+.section-hero .slider-caption {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    max-width: 50%;
+}
+
+

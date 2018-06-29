@@ -1,50 +1,50 @@
 /* ========================================================= */
 /* = =================PAGE STRUCTURE====================== = */
-/* ========================================================= */ 
+/* ========================================================= */
 /* Basic Page Structure (Container and Frame Sizes, standard-Padding etc...)
 
-  section:  always full width, contains frames that belong together, can have full-width-bg; 
+  section:  always full width, contains frames that belong together, can have full-width-bg;
 
   .frame:   defines content width, contains page modules, often centered (margin: 0 auto);
 
-  .module:  contains elements that belong together, can have padding; 
-            modules can be: widgets, forms, author-info, search-field, intro, slideshow, etc.; 
+  .module:  contains elements that belong together, can have padding;
+            modules can be: widgets, forms, author-info, search-field, intro, slideshow, etc.;
 
-  .page-pad: adds left & right padding to element; 
-              reccomenden for full-width modules, outer padding, so the content doesn’t stick to the window; 
-  .half, 
-  .third, 
-  .quarter: special modules, that are mainly used for grids. if used inside modules, containing module should have no padding; 
+  .page-pad: adds left & right padding to element;
+              reccomenden for full-width modules, outer padding, so the content doesn’t stick to the window;
+  .half,
+  .third,
+  .quarter: special modules, that are mainly used for grids. if used inside modules, containing module should have no padding;
 
   _____________
-  How it works: 
+  How it works:
 
   section___________________________________________________________
   |          .frame______________________________________           |
   |          |      .module________________________      |          |
-  |          |      |                              |     |          |                               
+  |          |      |                              |     |          |
   |          |      |  elments, forms...           |     |          |
   |          |      |  modules have padding,       |     |          |
   |          |      |  sections and frames not     |     |          |
-  |          |      |______________________________|     |          |                                                  
+  |          |      |______________________________|     |          |
   |          |___________________________________________|          |
   |          .frame.clear________________________________           |
   |          |      .half__________.half___________      |          |
-  |          |      |              |               |     |          |                               
   |          |      |              |               |     |          |
   |          |      |              |               |     |          |
   |          |      |              |               |     |          |
-  |          |      |______________|_______________|     |          |                                                  
+  |          |      |              |               |     |          |
+  |          |      |______________|_______________|     |          |
   |          |___________________________________________|          |
   |_________________________________________________________________|
-  section___________________________________________________________                                                                               
+  section___________________________________________________________
   |          .frame.clear________________________________           |
   |          |      .quarter_.third________________      |          |
-  |          |      |        |                     |     |          |                               
   |          |      |        |                     |     |          |
   |          |      |        |                     |     |          |
   |          |      |        |                     |     |          |
-  |          |      |________|_____________________|     |          |                                                  
+  |          |      |        |                     |     |          |
+  |          |      |________|_____________________|     |          |
   |          |___________________________________________|          |
   |_________________________________________________________________|
 */
@@ -60,49 +60,49 @@
   width: 100%;
   overflow: hidden;
 }
-  
+
   .content {
     position: relative;
-  } 
-  
-    .frame, 
+  }
+
+    .frame,
     [class*=frame-] { /*frame, contains Content-Modules, no padding!*/
-      position: relative; 
+      position: relative;
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-    } 
+    }
 
-      .module, 
+      .module,
       [class*=module-] { /*module, lives inside .frame, contains  */
         padding: 0 10px;
-      } 
+      }
 
 
-        .page-pad, 
+        .page-pad,
         .page-padding { /* adds l/r padding to element */
           padding: 10px;
-        } 
+        }
 
 
-  
-/*GRID 
+
+/*GRID
 **************************************************************/
 
-.half, 
-.third, .third.double, 
-.quarter, .quarter.triple  { 
+.half,
+.third, .third.double,
+.quarter, .quarter.triple  {
   width: 100%;
   position: relative;
   float: none;
-} 
+}
 
-@media screen and (min-width: 600px) { 
+@media screen and (min-width: 600px) {
 
   .half {
     width: 50.000000%;
     float: left;}
-  
+
   .third {
     width: 33.333333%;
     float: left;}
@@ -110,13 +110,56 @@
     .third.double {
       width: 66.666666%;
       float: left;}
-  
+
   .quarter {
     width: 25.000000%;
     float: left;}
 
     .quarter.triple {
       width: 75.000000%;
-      float: left;} 
+      float: left;}
+
+}
+
+
+/* FLEX */
+
+
+@media screen and (min-width: 800px) {
+
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .flex-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  .flex-align-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .flex-justify-center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .flex-wrap-mobile {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+
+  .flex-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 
 }

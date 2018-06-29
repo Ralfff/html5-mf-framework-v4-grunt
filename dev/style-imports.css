@@ -1,44 +1,59 @@
-@charset "UTF-8"; 
-/*!   
+@charset "UTF-8";
+/*!
 Theme Name: R.H. Dev. Theme
-Theme URI: 
-Description: Customized Theme for seamless, customized Theme Development.  
+Theme URI:
+Description: Customized Theme for seamless, customized Theme Development.
 Author: Ralf Hoffmeister
 Author URI: http://ralfhoffmeister.de
-Version: 3.4.2 
+Version: 3.4.2
 */
 
 /* CSS Document */
 
 
-@import "css/css-dev/reset.css"; 
+@import "css/css-dev/reset.css";
 
 
-@import "css/css-dev/plugins.css"; 
+@import "css/css-dev/plugins.css";
 
 
-@import "css/css-dev/helper.css"; 
+@import "css/css-dev/helper.css";
 
 
-@import "css/css-dev/base-styles.css"; 
+@import "css/css-dev/base-styles.css";
 
 
-@import "css/css-dev/structure.css"; 
+@import "css/css-dev/structure.css";
 
 
-@import "css/css-dev/modules.css"; 
+/* ========================================================= */
+/* = ==================== MODULES ======================== = */
+/* ========================================================= */
+/*
+specific Layout-Modules and Components. keep it light, specifics and variations will be defined in content.css
+(Class-Name System: .moduleName-componentName-state)
+*/
+@import "css/css-dev/modules/form.css";
+@import "css/css-dev/modules/hero.css";
+@import "css/css-dev/modules/carousel.css";
+@import "css/css-dev/modules/vitrine.css";
+@import "css/css-dev/modules/cards.css";
+@import "css/css-dev/modules/colors.css";
 
 
-@import "css/css-dev/header.css"; 
+/* End Modules */
 
 
-@import "css/css-dev/content.css"; 
+@import "css/css-dev/header.css";
 
 
-@import "css/css-dev/footer.css"; 
+@import "css/css-dev/content.css";
 
 
-@import "css/css-dev/media.css"; 
+@import "css/css-dev/footer.css";
+
+
+@import "css/css-dev/media.css";
 
 
 
